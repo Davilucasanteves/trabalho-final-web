@@ -3,7 +3,7 @@
 ## friogelado.com ***[W]***
 
 ### Descrição
-Um site desenvolvido para auxílio na ordem e manutenção de uma empresa de conserto de ventiladores, geladeiras etc.
+Um site desenvolvido para auxílio na ordem e manutenção de uma empresa de conserto de ventiladores e geladeiras.
 
 ### Problema a ser solucionado
 O proprietário busca maneiras de organizar melhor o seu trabalho, como:
