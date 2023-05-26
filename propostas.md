@@ -24,16 +24,17 @@ O dono da empresa *Frio Gelado* e seus funcionários.
 
 # Proposta 02
 
-## Título_da_proposta
+## filmeTodaHora.com
 
 ### Descrição
+um site para assistir filmes series desenhos
 
 ### Problema a ser solucionado
-
+possibilitar que pessoas que não tenham condições finaceiras e nem fisicas, a assistirem a um filme ou uma serie
 ### Público alvo
-
+pessoas de toda as idades
 ### Funcionalidades
-
+reprodusir midia, postar comentarios, salvar ultimo video assistido, dar classificação para os filmes, quantidade de visualizações, criar conta,
 # Proposta 03
 
 ## Título_da_proposta
