@@ -22,19 +22,28 @@ O dono da empresa *Frio Gelado* e seus funcionários.
 * Possuir cadastro de patrão e funcionários para manipulação de informações desses, como nome, telefone, salário, frequência no trabalho etc.;
 * Possuir interface de patrão e clientes para atualização de lucros e gastos, com ferramentas para cálculo de lucro e prejuízo mensal.
 
+
 # Proposta 02
 
 ## filmeTodaHora.com
 
 ### Descrição
-um site para assistir filmes series desenhos
+Um site para assistir filmes, séries e desenhos.
 
 ### Problema a ser solucionado
-possibilitar que pessoas que não tenham condições finaceiras e nem fisicas, a assistirem a um filme ou uma serie
+Possibilitar à pessoas que não tenham condições financeiras e nem físicas assistirem a um filme ou uma série.
+
 ### Público alvo
-pessoas de toda as idades
+Pessoas de todas as idades.
+
 ### Funcionalidades
-reprodusir midia, postar comentarios, salvar ultimo video assistido, dar classificação para os filmes, quantidade de visualizações, criar conta,
+* Reproduzir mídias;
+* Postar comentários;
+* Salvar último video assistido (aba de assistidos recentemente);
+* Dar classificação para os filmes (1 a 5 estrelas);
+* Quantidade de visualizações;
+* Criar conta.
+
 # Proposta 03
 
 ## Título_da_proposta
