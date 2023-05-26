@@ -48,10 +48,17 @@ Pessoas de todas as idades.
 
 ## Título_da_proposta
 
-### Descrição
+### adivinheSô.com
 
 ### Problema a ser solucionado
+Acabar com a vontade de se jogar um novo jogo de cartas, os outros já estão manjados.
 
 ### Público alvo
+Alunos do IF e amantes do jogo que surgirão com o tempo.
 
 ### Funcionalidades
+* Criar e gerir conta de usuários;
+* Permitir jogar o jogo em si com 2-6 jogadores;
+* Adição de chat in-game;
+* Microtransações (compra de novos baralhos);
+* *Coming soon*
