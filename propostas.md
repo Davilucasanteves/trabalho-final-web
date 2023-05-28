@@ -31,7 +31,7 @@ O dono da empresa *Frio Gelado* e seus funcionários.
 Um site para assistir filmes, séries e desenhos.
 
 ### Problema a ser solucionado
-Possibilitar à pessoas que não tenham condições financeiras e nem físicas assistirem a um filme ou uma série.
+Possibilitar às pessoas que não tenham condições financeiras e nem físicas assistirem a um filme ou uma série.
 
 ### Público alvo
 Pessoas de todas as idades.
