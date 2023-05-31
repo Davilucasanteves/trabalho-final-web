@@ -46,9 +46,9 @@ Pessoas de todas as idades.
 
 # Proposta 03
 
-## Título_da_proposta
+## adivinheSô.com
 
-### adivinheSô.com
+### descrição
 
 ### Problema a ser solucionado
 Acabar com a vontade de se jogar um novo jogo de cartas, os outros já estão manjados.
