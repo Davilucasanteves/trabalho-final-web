@@ -39,7 +39,7 @@ A ordem de força das cartas é a mesma do truco mineiro, sendo ela (em ordem cr
 
 ### Cartas normais
 
-| --- | Quatros | Cincos | Seis | Setes | Rainhas | Valetes | Reis | Ases | *Duques* | *Ternos* |
+| - | Quatros | Cincos | Seis | Setes | Rainhas | Valetes | Reis | Ases | *Duques* | *Ternos* |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Ouros | --- | 4♦ | 5♦ | 6♦ | -- | Q♦ | J♦ | K♦ | A♦ | 2♦ | 3♦ | 
 | Espadas | --- | 4♠ | 5♠ | 6♠ | 7♠ | Q♠ | J♠ | K♠ | -- | 2♠ | 3♠ | 
@@ -48,6 +48,6 @@ A ordem de força das cartas é a mesma do truco mineiro, sendo ela (em ordem cr
 
 ### Manilhas (cartas mais fortes)
 
-| --- | Ouros | Espadas | Copas | Paus |
+| - | Ouros | Espadas | Copas | Paus |
 | --- | --- | --- | --- | --- |
 | Manilhas | 7♦ | A♠ | 7♥ | 4♣ |
