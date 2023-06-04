@@ -4,7 +4,7 @@
 
 O *AdivinheSô* (nome provisório) é um jogo de cartas semelhante ao truco mineiro, onde 2 a 
 7 jogadores precisam fazer uma quantidade determinada de pontos, sem mais nem menos, para 
-não perder pontos e assim vencer o jogo.
+não perder vidas e assim vencer o jogo.
 
 ## Funcionamento
 
