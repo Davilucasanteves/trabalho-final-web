@@ -1,0 +1,19 @@
+.titulo {
+    text-align: center;
+}
+body{
+    background-color: rgb(5, 107, 31);
+    color: rgb(211, 206, 221);
+}
+.imagem {
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin:  auto;
+}
+button {
+   
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
