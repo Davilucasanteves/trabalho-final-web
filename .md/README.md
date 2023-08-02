@@ -3,7 +3,7 @@ Trabalho final da disciplina de WEB
 
 # Os Ó do Borogodó
 
-### Integrantes
+## Integrantes
 
 - [Daví Lucas Antunes Neves](https://github.com/Davilucasanteves)
 - [Renato Neres Costa](https://github.com/RenatoNC2)
