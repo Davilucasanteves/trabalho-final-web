@@ -1,19 +1,120 @@
-.titulo {
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+header {
+    width: 100%;
+    background-color: rgba(157, 0, 0, 1);
+    padding: 40px 0;
+}
+
+.logoTexto {
     text-align: center;
+    color: white;
 }
-body{
-    background-color: rgb(5, 107, 31);
-    color: rgb(211, 206, 221);
+
+body {
+    background-color: rgb(6, 139, 39);
 }
-.imagem {
-    display: block;
-    max-width: 200px;
+
+.tamanhoCarta {
+    max-width: 100px;
     max-height: 200px;
-    margin:  auto;
 }
-button {
-   
-    padding: 10px 20px;
-    margin: 0 10px;
+
+
+.imagemCarta {
+    display: inline-block;
+    max-width: 100px;
+    max-height: 200px;
+    margin-right: 15px;
+    margin-top: 45px; /*Define a margem superior*/
+    margin-bottom: 45px; /*Define a margem inferior*/
+    
+
 }
+
+.containerBot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.containerDaPessoa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 229px;
+    position: relative;
+}
+
+.iconPerfil {
+    margin-top: 45px; /*Define a margem superior*/
+    margin-bottom: 45px; /*Define a margem inferior*/
+    margin-right: 190px;
+    margin-left: 60px;
+}
+
+.face {
+    max-width: 100px;
+    max-height: 200px;
+    margin-left: 48px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+
+}
+
+.frente {
+    transform: rotateY(540deg);
+}
+
+.containerDaPessoa.virada .frente {
+    transform: rotateY(360deg);
+}
+
+.verso {
+    transform: rotateY(360deg);
+    backface-visibility: hidden;
+}
+
+.containerDaPessoa.virada .verso  {
+    transform: rotateY(540deg);
+}
+  
+select {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+label {
+    font-size: 22px;
+    margin-bottom: 0px;
+    color:rgb(255, 255, 255);
+
+}
+
+.selectContainer {
+  text-align: center; 
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
 
