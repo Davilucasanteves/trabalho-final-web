@@ -70,9 +70,9 @@ function Resultado() {
     var valorSelecionado = selectElement.value;
     var respostaCorreta;
 
-    if ( BotCarta < MinhaCarta && valorSelecionado === "1" ) {
+    if ( BotCarta > MinhaCarta && valorSelecionado === "1" ) {
         respostaCorreta = true;
-    } else if ( BotCarta > MinhaCarta && valorSelecionado === "0") {
+    } else if ( BotCarta < MinhaCarta && valorSelecionado === "0") {
         respostaCorreta = true;
     }
 
