@@ -65,29 +65,26 @@ function exibirMinhaCarta(){
     cartaAtualMinha.src = Cartas[MinhaCarta].caminho;
 }
 
-function escolherResposta(resposta) {
-    var cartaAtual = imagensCartas[cartaAtualIndex];
-    var respostaCorreta = false;
+function Resultado() {
+    var selectElement = document.getElementById("palpite");
+    var valorSelecionado = selectElement.value;
+    var respostaCorreta;
 
-    if (cartaAtual === "imagens/4Paus.jpeg" && resposta === "faço") {
+    if ( BotCarta < MinhaCarta && valorSelecionado === "1" ) {
         respostaCorreta = true;
-    } else if (cartaAtual === "imagens/7Copas.png" && resposta === "não faço") {
+    } else if ( BotCarta > MinhaCarta && valorSelecionado === "0") {
         respostaCorreta = true;
     }
 
     if (!respostaCorreta) {
         alert("Você acertou!");
         flipCarta();
-        
     } else {
         alert("Você errou!");
         flipCarta();
-       
     }
 
 }
-
-
 
 function flipCarta() {
     const containerDaPessoa = document.querySelector('.containerDaPessoa');
