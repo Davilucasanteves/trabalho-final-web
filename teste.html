@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
     <head>
-        <title>Teste</title>
+        <title>AdivinheSô</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="estilo.css">
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     </head>
     <body>
         
@@ -14,6 +15,15 @@
                 </div>
             </div>
         </header>
+
+            <div id="vidas_bot">
+                <p>Vidas do bot</p>
+                <p id="vidas_bot_icons">❤️❤️❤️</p>
+            </div>
+            <div id="vidas_jogador">
+                <p>Vidas do jogador</p>
+                <p id="vidas_jogador_icons">❤️❤️❤️</p>
+            </div>
 
             <div class="containerBot">
                 <img class="imagemCarta" id="perfilBot" src="imagens/IconBot.png" alt="BO-imagem do bot">
@@ -27,14 +37,14 @@
             </div>
 
             <div class="selectContainer">   
-                <label for="palpite">Escolha uma opção e logo após pressione uma tecla:</label>
+                <label for="palpite">Escolha uma opção e logo após pressione uma tecla: </label>
                 <select id="palpite" onkeydown="Resultado()">
-                    <option value="0">Faço</option>
-                    <option value="1">Não Faço</option>
+                    <option value="0">Eu faço!</option>
+                    <option value="1">Eu não faço!</option>
                 </select>
             </div>
         
         <script src="script.js"></script>
-    </bory> 
+    </body> 
 </html>
     
