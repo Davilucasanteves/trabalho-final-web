@@ -94,8 +94,8 @@ function Resultado() {
     let valorSelecionado = selectElement.value;
     let respostaCorreta;
     let valorselecionabot = bot()
-    let part = 1
-        if(part === 1){
+    let part = totalVidasJogador+totalVidasBot
+        if(part === 6 || part===4 || part===2){
             if(valorSelecionado == 1){
                valorselecionabot = valorSelecionado + 1
             }else{
@@ -118,7 +118,7 @@ function Resultado() {
                 TotalVidasJogador -= 1;
             }
 
-        }else{
+        }else if(part === 5 || part===3 || part===1){
             let valorselecionabot = bot();
     
             if (BotCarta > MinhaCarta && valorselecionabot === 0) {
@@ -136,6 +136,8 @@ function Resultado() {
                 flipCarta();
                 TotalVidasJogador -= 1;
             }
+        }else{
+            alert("aconteceu algo de errado")
         }
         if (TotalVidasBot == 2) {
             vidasBot.innerHTML = '❤️❤️🖤';
