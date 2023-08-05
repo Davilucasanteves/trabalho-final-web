@@ -121,9 +121,9 @@ function Resultado() {
         }else{
             let valorselecionabot = bot();
     
-            if (BotCarta > MinhaCarta && valorselecionabot === 1) {
+            if (BotCarta > MinhaCarta && valorselecionabot === 0) {
                 respostaCorreta = true;
-            } else if (BotCarta < MinhaCarta && valorselecionabot === 0) {
+            } else if (BotCarta < MinhaCarta && valorselecionabot === 1) {
                 respostaCorreta = true;
             }
             
