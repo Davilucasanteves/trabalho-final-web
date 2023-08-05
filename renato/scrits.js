@@ -66,12 +66,12 @@ function bot(){
         let resultado
 
         if (MinhaCarta >= 29){
-            resultado = 0;
+            resultado = 1
         }else if(MinhaCarta <= 28 && MinhaCarta >=22){
-            let randomValue = getRandomZeroOrOne();
-            resultado = randomValue;
-        }else{
-            resultado = 1;
+            let randomValue = getRandomZeroOrOne()
+            resultado = randomValue
+        }else if(MinhaCarta<22){
+            resultado = 0
         }
     
         return resultado;
@@ -79,13 +79,13 @@ function bot(){
 }
 
 function exibirCartaDoBot() {
-    let cartaAtual = document.getElementById("carta");
+    var cartaAtual = document.getElementById("carta");
     cartaAtual.src = Cartas[BotCarta].caminho;
     exibirMinhaCarta()
 }
 
 function exibirMinhaCarta(){
-    let cartaAtualMinha = document.getElementById("cartaPessoa");
+    var cartaAtualMinha = document.getElementById("cartaPessoa");
     cartaAtualMinha.src = Cartas[MinhaCarta].caminho;
 }
 
@@ -93,18 +93,21 @@ function Resultado() {
     let selectElement = document.getElementById("palpite");
     let valorSelecionado = selectElement.value;
     let respostaCorreta;
-        if(part == 1){
-            let valorselecionabot
+    let valorselecionabot = bot()
+    let part = 1
+        if(part === 1){
             if(valorSelecionado == 1){
                valorselecionabot = valorSelecionado + 1
             }else{
                 valorselecionabot = 0
             }
-            if ( BotCarta < MinhaCarta && valorSelecionado === "1" ) {
-                respostaCorreta = true;
-            } else if ( BotCarta > MinhaCarta && valorSelecionado === "0") {
+            if ( BotCarta > MinhaCarta && valorSelecionado === "0" ) {
+                respostaCorreta = true
+;
+            } else if ( BotCarta < MinhaCarta && valorSelecionado === "1") {
                 respostaCorreta = true;
             }
+        
             if (!respostaCorreta) {
                 alert("Você acertou!");
                 flipCarta();
@@ -119,12 +122,12 @@ function Resultado() {
             let valorselecionabot = bot();
     
             if (BotCarta > MinhaCarta && valorselecionabot === 1) {
-                respostaCorreta = false;
+                respostaCorreta = true;
             } else if (BotCarta < MinhaCarta && valorselecionabot === 0) {
-                respostaCorreta = false;
+                respostaCorreta = true;
             }
             
-            if (!respostaCorreta) {
+            if (respostaCorreta) {
                 alert("bot errou!" + valorselecionabot);
                 flipCarta();
                 TotalVidasBot -= 1;
@@ -155,7 +158,7 @@ function Resultado() {
             alert("Você perdeu para o bot!");
             vidasJogador.innerHTML = '🖤🖤🖤';
             location.reload();
-        }    
+        } 
 }
 
 function flipCarta() {
