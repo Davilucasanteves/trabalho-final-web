@@ -94,7 +94,7 @@ function Resultado() {
     let valorSelecionado = selectElement.value;
     let respostaCorreta;
     let valorselecionabot = bot()
-    let part = totalVidasJogador+totalVidasBot
+    let part = TotalVidasJogador+TotalVidasBot
         if(part === 6 || part===4 || part===2){
             if(valorSelecionado == 1){
                valorselecionabot = valorSelecionado + 1
