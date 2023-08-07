@@ -20,20 +20,9 @@ body {
     background-color: rgb(6, 139, 39);
 }
 
-.tamanhoCarta {
-    max-width: 100px;
-    max-height: 200px;
-}
 
+/* Estilo para o sistema de vidas */
 
-.imagemCarta {
-    display: inline-block;
-    max-width: 100px;
-    max-height: 200px;
-    margin-right: 15px;
-    margin-top: 45px; /*Define a margem superior*/
-    margin-bottom: 45px; /*Define a margem inferior*/
-}
 #vidas_bot {
     /* float: right; */
     position: absolute;
@@ -67,10 +56,25 @@ body {
     letter-spacing: 6pt;
 }
 
+.tamanhoDaCarta {
+    max-width: 100px;
+    max-height: 200px;
+}
+
+
+/* Estilo para as cartas  */
+
 .containerBot {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.CartaBot {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 45px; /*Define a margem superior*/
+    margin-bottom: 45px; /*Define a margem inferior*/
 }
 
 .containerDaPessoa {
@@ -89,14 +93,15 @@ body {
 }
 
 .face {
-    max-width: 100px;
-    max-height: 200px;
     margin-left: 48px;
     position: absolute;
     transform-style: preserve-3d;
     transition: all 500ms ease;
 
 }
+
+
+/* Animação de flip para as cartas */
 
 .frente {
     transform: rotateY(180deg);
@@ -115,6 +120,23 @@ body {
     transform: rotateY(540deg);
 }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para o butão do select */
+
 select {
     text-align: center;
     justify-content: center;
