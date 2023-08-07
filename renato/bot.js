@@ -61,21 +61,17 @@ function getRandomZeroOrOne() {
     return Math.round(Math.random());
 }
 function bot(){
-    embaralharCartas()
+        let resultado;
 
-        let resultado
-
-        if (MinhaCarta >= 29){
-            resultado = 1
-        }else if(MinhaCarta <= 28 && MinhaCarta >=22){
-            let randomValue = getRandomZeroOrOne()
-            resultado = randomValue
-        }else if(MinhaCarta<22){
-            resultado = 0
+        if (MinhaCarta >= 29) {
+            resultado = 1;
+        }else if(MinhaCarta <= 28 && MinhaCarta >= 22) {
+            let randomValue = getRandomZeroOrOne();
+            resultado = randomValue;
+        }else if(MinhaCarta < 22) {
+            resultado = 0;
         }
-    
         return resultado;
-
 }
 
 function exibirCartaDoBot() {
