@@ -77,7 +77,7 @@ function bot(){
 function exibirCartaDoBot() {
     var cartaAtual = document.getElementById("carta");
     cartaAtual.src = Cartas[BotCarta].caminho;
-    exibirMinhaCarta()
+    exibirMinhaCarta();
 }
 
 function exibirMinhaCarta(){
@@ -91,11 +91,11 @@ function Resultado() {
     let respostaCorreta;
     let part = TotalVidasBot+TotalVidasJogador
         if(part == 6|| part == 4 || part == 2){
-            if ( BotCarta > MinhaCarta && valorSelecionado === "1" ) {
-                respostaCorreta = true
+            if ( BotCarta > MinhaCarta && valorSelecionado === "1") {
+                respostaCorreta = true;
 
             } else if ( BotCarta < MinhaCarta && valorSelecionado === "0") {
-                respostaCorreta = true
+                respostaCorreta = true;
             }
         
             if (!respostaCorreta) {
@@ -107,15 +107,15 @@ function Resultado() {
                 flipCarta();
                 TotalVidasJogador -= 1;
             }
-        }else if(part ==5 || part == 3|| part ==1){
+        }else if(part ==5 || part == 3|| part == 1){
             let valorselecionabot = bot();
             respostaCorreta = (BotCarta > MinhaCarta && valorselecionabot === 1) || (BotCarta < MinhaCarta && valorselecionabot === 0);
             if (respostaCorreta) {
-                alert("bot errou!" + valorselecionabot);
+                alert("bot errou!");
                 flipCarta();
                 TotalVidasBot -= 1;
             } else {
-                alert("bot acertou!" + valorselecionabot);
+                alert("bot acertou!");
                 flipCarta();
                 TotalVidasJogador -= 1;
             }
