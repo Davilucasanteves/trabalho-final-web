@@ -23,43 +23,34 @@ body {
 
 /* Estilo para o sistema de vidas */
 
-#vidas_bot {
-    /* float: right; */
+.MostraVidas {
     position: absolute;
-    margin-top: 3%;
-    margin-left: 7%;
-    width: 250px;
-    /*border: 3px solid whitesmoke;*/
-    font: 18pt sans-serif;
-    color: whitesmoke;
-    text-align: center;
-    border-radius: 8px;
+    width: 38vw;
 }
-#vidas_bot_icons {
-    font-size: 28pt;
-    letter-spacing: 6pt;
-}
-#vidas_jogador {
-    /* float: left; */
-    position: absolute;
-    margin-top: 17%;
-    margin-left: 7%;
-    width: 250px;
-    /*border: 3px solid whitesmoke;*/
-    font: 18pt sans-serif;
-    color: whitesmoke;
-    text-align: center;
-    border-radius: 8px;
-}
-#vidas_jogador_icons {
+
+.IconSets {
     font-size: 28pt;
     letter-spacing: 6pt;
 }
 
-.tamanhoDaCarta {
-    max-width: 100px;
-    max-height: 200px;
+#VidaIconBot{
+    margin-left: 28%;
+    margin-bottom: 250px;
 }
+
+#VidaIconPessoa {
+    margin-left: 33%;
+}
+
+#TituloDeVida {
+    font: 18pt sans-serif;
+    color: whitesmoke;
+    margin-top: 75px;
+    margin-left: 25%;
+    
+}
+
+
 
 
 /* Estilo para as cartas  */
@@ -68,56 +59,56 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.CartaBot {
-    display: inline-block;
-    margin-right: 15px;
-    margin-top: 45px; /*Define a margem superior*/
-    margin-bottom: 45px; /*Define a margem inferior*/
+    margin-top: 25px;
+    position: relative;
 }
 
 .containerDaPessoa {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 150px;
+    margin-top: 200px; 
+    margin-bottom: 25px; 
     position: relative;
 }
 
 .iconPerfil {
-    margin-top: 45px; /*Define a margem superior*/
-    margin-bottom: 45px; /*Define a margem inferior*/
+    margin-top: 45px; 
+    margin-bottom: 45px; 
     margin-right: 190px;
     margin-left: 60px;
-}
-
-.face {
-    margin-left: 48px;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: all 500ms ease;
-
 }
 
 
 /* Animação de flip para as cartas */
 
-.frente {
-    transform: rotateY(180deg);
+.carta {
+    max-width: 100px;
+    max-height: 200px;
+    margin-left: 55px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
 }
 
-.containerDaPessoa.virada .frente {
-    transform: rotateY(360deg);
+.frente {
+    transform: rotateY(180deg);
+    
+}
+
+
+.frente.virada  {
+    transform: rotateY(180deg);
+    
 }
 
 .verso {
-    transform: rotateY(360deg);
-    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
 }
 
-.containerDaPessoa.virada .verso  {
+.containerDaPessoa.virada  {
     transform: rotateY(540deg);
+    backface-visibility: hidden;
 }
   
 
@@ -132,10 +123,65 @@ body {
 
 
 
+/* Animação de shuffle
+
+.containerBaralho.shuffle {
+    animation: shuffleAnimation 3s ease;
+}
+
+@keyframes shuffleAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-30px);
+    }
+    75% {
+        transform: translateX(30px);
+    }
+
+}
+*/
+.containerBaralho {
+    position: relative;
+}
+
+.baralho {
+    position: absolute;
+    right: 20%;
+}
+
+
+/* Animação de retorno das cartas para o baralho */
+
+/* @keyframes moveAndReturnAnimation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(50%) translateY(-50%);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.moveAndReturn {
+    animation: moveAndReturnAnimation 3s ease forwards;
+}
+ */
+ 
 
 
 
-/* Estilo para o butão do select */
+
+
+
+
+
+
+
+/* Estilo para o botão do select */
 
 select {
     text-align: center;
@@ -145,8 +191,8 @@ select {
     margin-top: 80px;
     width: 125px;
     font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 5px solid #ccc;
+    border-radius: 9px;
     
 }
 

@@ -2,8 +2,7 @@ var BotCarta;
 var MinhaCarta;
 var TotalVidasJogador = 3;
 var TotalVidasBot = 3;
-var vidasBot = document.getElementById('vidas_bot_icons');
-var vidasJogador = document.getElementById('vidas_jogador_icons');
+var CartaAtualDoBot;
 
 var Cartas = [
     { nome: '4 de paus',         valor: '40', caminho: 'Cartas/4-de-paus.png'},
@@ -48,47 +47,47 @@ var Cartas = [
     { nome: '4 de ouros',        valor: '1',  caminho: 'Cartas/4-de-ouros.png'}
 ]
 
-function embaralharCartas() {
-    MinhaCarta = Math.floor(Math.random() * Cartas.length);
+window.addEventListener('load', function() {
     BotCarta = Math.floor(Math.random() * Cartas.length);
-    while (BotCarta === MinhaCarta) {
+    CartaAtualDoBot = document.getElementById('cartaDoBot');
+    CartaAtualDoBot.src = Cartas[BotCarta].caminho;
+});
+
+function EmbaralharCartas() {
+    MinhaCarta = Math.floor(Math.random() * Cartas.length);
+    do {
         BotCarta = Math.floor(Math.random() * Cartas.length);
-    }
-    setTimeout(exibirCartaDoBot, 100);
-   
+    } while (BotCarta === MinhaCarta);
+    CartaDoBot();
 }
 
-function exibirCartaDoBot() {
-    var cartaAtual = document.getElementById("carta");
-    cartaAtual.src = Cartas[BotCarta].caminho;
-    exibirMinhaCarta()
+function CartaDoBot() {
+    CartaAtualDoBot = document.getElementById('cartaDoBot');
+    CartaAtualDoBot.src = Cartas[BotCarta].caminho;
+    CartaDaPessoa();
 }
 
-function exibirMinhaCarta(){
-    var cartaAtualMinha = document.getElementById("cartaPessoa");
-    cartaAtualMinha.src = Cartas[MinhaCarta].caminho;
+function CartaDaPessoa() {
+    var CartaAtualPessoa = document.getElementById('cartaDaPessoa');
+    CartaAtualPessoa.src = Cartas[MinhaCarta].caminho;
+    Palpite();
 }
 
-function Resultado() {
-    var selectElement = document.getElementById("palpite");
-    var valorSelecionado = selectElement.value;
-    var respostaCorreta;
-
-    if ( BotCarta > MinhaCarta && valorSelecionado === "1" ) {
-        respostaCorreta = true;
-    } else if ( BotCarta < MinhaCarta && valorSelecionado === "0") {
-        respostaCorreta = true;
-    }
-
-    if (!respostaCorreta) {
-        alert("Você acertou!");
-        flipCarta();
+function Palpite() {
+    var valorSelecionado = document.getElementById('palpite').value;
+    if ( BotCarta > MinhaCarta && valorSelecionado === '1' || BotCarta < MinhaCarta && valorSelecionado === '0' ) {
+        alert('Você acertou!');
         TotalVidasBot -= 1;
     } else {
-        alert("Você errou!");
-        flipCarta();
+        alert('Você errou!');
         TotalVidasJogador -= 1;
     }
+    Vidas();
+}
+
+function Vidas() {
+    var vidasBot = document.getElementById('VidaIconBot');
+    var vidasJogador = document.getElementById('VidaIconPessoa');
 
     if (TotalVidasBot == 2) {
         vidasBot.innerHTML = '❤️❤️🖤';
@@ -112,24 +111,56 @@ function Resultado() {
         vidasJogador.innerHTML = '🖤🖤🖤';
         location.reload();
     } 
+    FlipCarta();
 }
 
-function flipCarta() {
-    const containerDaPessoa = document.querySelector('.containerDaPessoa');
+function FlipCarta() {
+    var frente = document.querySelector('.frente');
+    // var cartaDoBot = document.querySelector('.containerBot');
 
-    if (containerDaPessoa.classList.contains('virada')) {
-        containerDaPessoa.classList.remove('virada');
-        setTimeout(embaralharCartas, 3000);
+        frente.classList.remove('virada');
         setTimeout(() => {
-            containerDaPessoa.classList.add('virada');
+            frente.classList.add('virada');
+            // cartaDoBot.classList.add('virada');
         }, 3000);
-    } else {
-        containerDaPessoa.classList.add('virada');
-        setTimeout(embaralharCartas, 3000);
-        setTimeout(() => {
-        containerDaPessoa.classList.remove('virada');
-        }, 3000);
-    }
+       
+    // // setTimeout(VoltarBaralho, 3000);
+    // setTimeout(embaralharCartas, 3000);
+
 }
 
-embaralharCartas();
+// function VoltarBaralho() {
+//     var cartaDoBot = document.getElementById('carta');
+//     var cartaDoVerso = document.getElementById('verso');
+//     var cartaDaFrente = document.getElementById('cartaPessoa');
+
+//     cartaDoBot.classList.add('moveAndReturn');
+//     cartaDoVerso.classList.add('moveAndReturn');
+//     cartaDaFrente.classList.add('moveAndReturn');
+
+//     const rect = cartaDoBot.getBoundingClientRect();
+
+//     const offsetY = window.scrollY;
+//     const offsetX = window.scrollX;
+
+//     const absoluteLeft = rect.left + offsetX;
+//     const absoluteTop = rect.top + offsetY;
+
+//     console.log('Absolute Left:', absoluteLeft);
+//     console.log('Absolute Top:', absoluteTop);
+
+//     setTimeout(function() {
+//         cartaDoBot.classList.remove('moveAndReturn');
+//         cartaDoVerso.classList.remove('moveAndReturn');
+//         cartaDaFrente.classList.remove('moveAndReturn');
+//     }, 3000);
+
+//     setTimeout(shuffle, 3000);
+// }
+
+// function shuffle() {
+//     var containerBaralho = document.querySelector('.containerBaralho');
+//     containerBaralho.classList.add('shuffle');
+//     embaralharCartas();
+// }
+// embaralharCartas();
