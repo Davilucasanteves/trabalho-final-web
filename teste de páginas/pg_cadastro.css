@@ -26,7 +26,7 @@ input[type='text'] {
     text-align: right;
     font-size: 14pt;
     line-height: 35px;
-    padding-left: 30%;
+    padding-left: 35%;
     padding-top: 10%;
 }
 
@@ -49,15 +49,37 @@ input[type='text'] {
     background-color: #d9d9d9;
 }
 
-#rodapé {
-    position: absolute;
-    bottom: 0;
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: auto;
+}
+
+#colab {
+    text-align: left;
+    line-height: 55pt;
+    padding-left: 13%;
+    padding-bottom: 20px;
+}
+
+.linha {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 15%;
+    padding: 0 25px;
+}
+
+#rodapé {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    font-size: 14pt;
+    font-size: 13.5pt;
     color: whitesmoke;
     background-color: #4B4747;
-    text-align: left;
-    padding: 40px;
+    text-align: center;
+    line-height: 20pt;
+    padding: 30px;
+    padding-top: 10px;
 }
