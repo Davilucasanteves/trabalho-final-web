@@ -92,36 +92,21 @@ body {
 
 .frente {
     transform: rotateY(180deg);
-    
 }
 
-
-.frente.virada  {
-    transform: rotateY(180deg);
-    
+.containerDaPessoa.virada .frente {
+    transform: rotateY(360deg);
 }
 
 .verso {
-    transform: rotateY(180deg);
-    
-}
-
-.containerDaPessoa.virada  {
-    transform: rotateY(540deg);
+    transform: rotateY(360deg);
     backface-visibility: hidden;
 }
+
+.containerDaPessoa.virada .verso  {
+    transform: rotateY(540deg);
+}
   
-
-
-
-
-
-
-
-
-
-
-
 
 /* Animação de shuffle
 
@@ -170,16 +155,6 @@ body {
     animation: moveAndReturnAnimation 3s ease forwards;
 }
  */
- 
-
-
-
-
-
-
-
-
-
 
 /* Estilo para o botão do select */
 
