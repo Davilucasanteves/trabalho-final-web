@@ -5,10 +5,10 @@
 }
   
 header {
-    width: 100%;
+    width: 100vw;
     font: 14pt sans-serif;
     background-color: rgba(157, 0, 0, 1);
-    padding: 10px;
+    padding: 1vw;
 }
 
 .logoTexto {
@@ -35,7 +35,7 @@ body {
 
 #VidaIconBot{
     margin-left: 28%;
-    margin-bottom: 250px;
+    margin-bottom: 40%;
 }
 
 #VidaIconPessoa {
@@ -45,12 +45,10 @@ body {
 #TituloDeVida {
     font: 18pt sans-serif;
     color: whitesmoke;
-    margin-top: 75px;
+    margin-top: 30%;
     margin-left: 25%;
     
 }
-
-
 
 
 /* Estilo para as cartas  */
@@ -72,7 +70,7 @@ body {
 }
 
 .iconPerfil {
-    margin-top: 45px; 
+    margin-top: ; 
     margin-bottom: 45px; 
     margin-right: 190px;
     margin-left: 60px;
@@ -110,23 +108,8 @@ body {
 
 /* Animação de shuffle
 
-.containerBaralho.shuffle {
-    animation: shuffleAnimation 3s ease;
-}
-
-@keyframes shuffleAnimation {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-30px);
-    }
-    75% {
-        transform: translateX(30px);
-    }
-
-}
 */
+
 .containerBaralho {
     position: relative;
 }
@@ -139,22 +122,10 @@ body {
 
 /* Animação de retorno das cartas para o baralho */
 
-/* @keyframes moveAndReturnAnimation {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    50% {
-        transform: translateX(50%) translateY(-50%);
-    }
-    100% {
-        transform: translateX(0) translateY(0);
-    }
-}
 
-.moveAndReturn {
-    animation: moveAndReturnAnimation 3s ease forwards;
-}
- */
+
+
+
 
 /* Estilo para o botão do select */
 
@@ -166,15 +137,15 @@ select {
     margin-top: 80px;
     width: 125px;
     font-size: 18px;
-    border: 5px solid #ccc;
+    border: 5px solid #e99999;
     border-radius: 9px;
     
 }
 
 label {
     font: 18pt sans-serif;
-    margin-top: 6px;
-    margin-bottom: 3px;
+    /* margin-top: 6px;
+    margin-bottom: 3px; */
     color:rgb(255, 255, 255);
 
 }
