@@ -9,47 +9,48 @@
     <body>
         
         <header>
-            <div class="Cabeçalho">
-                <div class="logoTexto">
-                    <h1>AdivinheSô</h1>
-                </div>
+            <div class="logoTexto">
+                <h1>AdivinheSô</h1>
             </div>
         </header>
        
+        <section class="CoreGame">
             <div class="MostraVidas">
                 <div>
-                    <p id="TituloDeVida">Vidas do bot</p>
-                    <p class="IconSets" id="VidaIconBot">❤️❤️❤️</p>
+                    <img id="FotoDePerfilDoBot" src="/imagens/IconBot.png">
+                    <p id="TituloDaVida">Vidas do bot</p>
+                    <p class="ÍconeDeVida" id="ÍconeDeVidaDoBot">❤️❤️❤️</p>
                 </div>
                 <div>
-                    <p id="TituloDeVida">Vidas do jogador</p>
-                    <p class="IconSets" id="VidaIconPessoa">❤️❤️❤️</p>
+                    <img id="FotoDePerfilDaPessoa" src="/imagens/IconPessoa.png"> 
+                    <p id="TituloDaVida">Vidas do jogador</p>
+                    <p class="ÍconeDeVida" id="ÍconeDeVidaDaPessoa">❤️❤️❤️</p>
                 </div>
             </div>
-
             <div class="containerBot">
-                <img class="iconPerfil" src="/imagens/IconBot.png"> 
-                <img class="carta" id="cartaDoBot" src="">               
+                <img class="carta" id="cartaDoBot" src=""> 
             </div>
-
+            <div class="containerDaPessoa">
+                    <div class="frente">
+                        <img class="carta" id="cartaDaPessoa" src="">
+                    </div>  
+                    <div class="verso">
+                        <img class="carta"  id="carta" src="/Cartas/verso.png">
+                    </div>         
+            </div>
             <div class="containerBaralho">
-                <img class="baralho carta" id="carta" src="/Cartas/verso.png">
+                <img class="carta" id="carta" src="/Cartas/verso.png">
             </div>
 
-            <div class="containerDaPessoa">        
-                <img class="iconPerfil" src="/imagens/IconPessoa.png">    
-                <img class="frente carta" id="cartaDaPessoa" src=""> 
-                <img class="verso carta"  id="carta" src="/Cartas/verso.png">     
-            </div>
-
-            <div class="selectContainer">   
-                <label for="palpite">Escolha uma opção e logo após pressione uma tecla: </label>
-                <select id="palpite" onkeydown="Palpite()">
-                    <option value="0">Eu não faço!</option>
-                    <option value="1">Eu faço!</option>
-                </select>
-            </div>
-
+        </section>
+        <div class="selectContainer">   
+            <label>Escolha uma opção e logo após pressione uma tecla:</label>
+            <select id="palpite" onkeydown="Rodada()">
+                <option value="0">Eu não faço!</option>
+                <option value="1">Eu faço!</option>
+            </select>
+        </div>
+        
         <script src="game.js"></script>
     </body> 
 </html>  

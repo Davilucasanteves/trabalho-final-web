@@ -2,6 +2,7 @@ var BotCarta;
 var MinhaCarta;
 var TotalVidasJogador = 3;
 var TotalVidasBot = 3;
+var rodada = 1;
 
 const Cartas = [
     { valor: '40', caminho: '/Cartas/4-de-paus.png'},
@@ -48,6 +49,16 @@ const Cartas = [
 
 EmbaralharCartas();
 
+function Rodada(){
+    if(rodada == 1) {
+        Palpite();
+    } else {
+        AtualizaSelect();
+        AdicionaOutraCartaParaBot();
+        AdicionaOutraCartaParaPessoa();
+    }
+}
+
 function EmbaralharCartas() {
     MinhaCarta = Math.floor(Math.random() * Cartas.length);
     do {
@@ -80,8 +91,8 @@ function Palpite() {
 }
 
 function Vidas() {
-    let vidasBot = document.getElementById('VidaIconBot');
-    let vidasJogador = document.getElementById('VidaIconPessoa');
+    let vidasBot = document.getElementById('ÍconeDeVidaDoBot');
+    let vidasJogador = document.getElementById('ÍconeDeVidaDaPessoa');
 
     if (TotalVidasBot == 2) {
         vidasBot.innerHTML = '❤️❤️🖤';
@@ -102,6 +113,7 @@ function Vidas() {
         alert("Você perdeu para o bot!");
         location.reload();
     } 
+    rodada += 1;
     FlipCarta();
 }
 
@@ -116,11 +128,62 @@ async function FlipCarta() {
             resolve(); 
         }, 3000);
     });
-
-    setTimeout(EmbaralharCartas, 100);
-  }
+    setTimeout(EmbaralharCartas, 200);
+}
    
+// Segunda Rodada
 
+const OpçõesDoSelect = [
+    { valor: '0', texto: 'Faço nenhuma' },
+    { valor: '1', texto: 'Faço uma' },
+    { valor: '2', texto: 'Faço duas' },
+    { valor: '3', texto: 'Faço três' },
+    { valor: '4', texto: 'Faço quatro' },
+    { valor: '5', texto: 'Faço cinco' },
+    { valor: '6', texto: 'Faço seis' },
+]
 
+function AtualizaSelect(){
+    const select = document.getElementById('palpite');
+    select.innerHTML = '';
 
+    for (let i = 0; i <= rodada; i++) {
+        var option = document.createElement('option');
+        option.value = OpçõesDoSelect[i].valor;
+        option.textContent = OpçõesDoSelect[i].texto;
+        select.appendChild(option);
+    }
+   
+}
 
+function AdicionaOutraCartaParaBot(){
+    const containerBot = document.querySelector('.containerBot');
+    containerBot.innerHTML = '';
+
+    for (let i = 0; i < rodada; i++) {
+        let novaCarta = document.createElement('img');
+        novaCarta.className = 'carta';
+        novaCarta.id = 'cartaDoBot' +i;
+        //EmbaralharCartas();
+        novaCarta.src = Cartas[3].caminho;
+        containerBot.appendChild(novaCarta);
+    }
+}
+
+function AdicionaOutraCartaParaPessoa(){
+    const containerDaPessoa = document.querySelector('.containerDaPessoa');
+    containerDaPessoa.innerHTML = '';
+    
+    for (let i = 0; i < rodada; i++) {
+        let novaCarta = document.createElement('img');
+        novaCarta.className = 'carta';
+        novaCarta.id = 'cartaDaPessoa' +i;
+        // EmbaralharCartas();
+        novaCarta.src = '/Cartas/verso.png';
+        containerDaPessoa.appendChild(novaCarta);
+    }
+}
+
+function EventoDeCliqueNasImagens(){
+
+}

@@ -6,118 +6,163 @@
   
 header {
     width: 100vw;
-    font: 14pt sans-serif;
+    height: 70px;
+    display: grid;
+    place-items: center; 
     background-color: rgba(157, 0, 0, 1);
-    padding: 1vw;
 }
 
 .logoTexto {
-    text-align: center;
+    font: 14pt sans-serif;
     color: whitesmoke;
 }
 
 body {
-    background-color: rgb(6, 139, 39);
+    background-color: rgb(24, 143, 54);
 }
 
 
 /* Estilo para o sistema de vidas */
 
-.MostraVidas {
-    position: absolute;
-    width: 38vw;
+
+#FotoDePerfilDoBot {
+    margin-top: 20px;
+    margin-left: 45px;
 }
 
-.IconSets {
+#FotoDePerfilDaPessoa {
+    margin-left: 75px;
+}
+
+.ÍconeDeVida {
     font-size: 28pt;
     letter-spacing: 6pt;
 }
 
-#VidaIconBot{
-    margin-left: 28%;
+#ÍconeDeVidaDoBot {
+    margin-left: 12px;
     margin-bottom: 40%;
 }
 
-#VidaIconPessoa {
-    margin-left: 33%;
+#ÍconeDeVidaDaPessoa {
+    margin-left: 35px;
 }
 
-#TituloDeVida {
+#TituloDaVida {
     font: 18pt sans-serif;
     color: whitesmoke;
-    margin-top: 30%;
-    margin-left: 25%;
-    
 }
 
 
 /* Estilo para as cartas  */
+.CoreGame {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-items: center;
+}
+
+.MostraVidas {
+    grid-row: 1 / 3; 
+}
 
 .containerBot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
     position: relative;
+   
 }
 
 .containerDaPessoa {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px; 
-    margin-bottom: 25px; 
+    position: relative;
+    perspective: 1000px;
+}
+
+.containerBaralho {
+    grid-row: 1 / 3;
+    grid-column: 3;
     position: relative;
 }
 
-.iconPerfil {
-    margin-top: 1vw; 
-    margin-bottom: 45px; 
-    margin-right: 190px;
-    margin-left: 60px;
+
+
+/* Configuração das cartas depois da Primeira Rodada */
+#cartaDoBot0 {
+    margin-left: 0px;
+}
+#cartaDoBot1 {
+    margin-left: 110px;
+}
+#cartaDoBot2 {
+    margin-left: 550px;
+}
+#cartaDoBot3 {
+    margin-left: 700px;
+}
+#cartaDoBot4 {
+    margin-left: 300px;
+}
+#cartaDoBot5 {
+    margin-left: 300px;
+}
+
+#cartaDaPessoa0 {
+    margin-left: 0px;
+}
+#cartaDaPessoa1 {
+    margin-left: 110px;
+}
+#cartaDaPessoa2 {
+    margin-left: 550px;
+}
+#cartaDaPessoa3 {
+    margin-left: 700px;
+}
+#cartaDaPessoa4 {
+    margin-left: 300px;
+}
+#cartaDaPessoa5 {
+    margin-left: 300px;
 }
 
 
 /* Animação de flip para as cartas */
-
 .carta {
     max-width: 100px;
     max-height: 200px;
-    margin-left: 55px;
     position: absolute;
-    transform-style: preserve-3d;
-    transition: all 500ms ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
+/* .containerDaCarta {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+  */
+.s {
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
 .frente {
     transform: rotateY(180deg);
 }
 
-.containerDaPessoa.virada .frente {
-    transform: rotateY(360deg);
-}
-
 .verso {
-    transform: rotateY(360deg);
-    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
-.containerDaPessoa.virada .verso  {
-    transform: rotateY(540deg);
-}
-  
-
-/* Animação de shuffle
-
-*/
-
-.containerBaralho {
-    position: relative;
+.containerDaCarta.virada .frente {
+    transform: rotateY(180deg);
 }
 
-.baralho {
-    position: absolute;
-    right: 20%;
+.containerDaCarta.virada .verso {
+    transform: rotateY(180deg);
+    /* backface-visibility: hidden; */
 }
+
+   
+
+/* Animação de shuffle */
 
 
 /* Animação de retorno das cartas para o baralho */
@@ -125,35 +170,26 @@ body {
 
 
 
-
+                                                  
 
 /* Estilo para o botão do select */
 
+.selectContainer {
+    display: grid;
+    place-items: center; 
+}
+
 select {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    margin-top: 80px;
-    width: 125px;
+    margin-top: 6px;
+    width: auto;
     font-size: 18px;
-    border: 5px solid #e99999;
-    border-radius: 9px;
-    
+    text-align: center; 
 }
 
 label {
     font: 18pt sans-serif;
-    /* margin-top: 6px;
-    margin-bottom: 3px; */
     color:rgb(255, 255, 255);
-
+    margin-top: 5px;
 }
 
-.selectContainer {
-  text-align: center; 
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+                                                                                                                                                                                     
