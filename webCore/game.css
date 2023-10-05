@@ -85,41 +85,41 @@ body {
 
 /* Configuração das cartas depois da Primeira Rodada */
 #cartaDoBot0 {
-    margin-left: 0px;
+   
 }
 #cartaDoBot1 {
     margin-left: 110px;
 }
 #cartaDoBot2 {
-    margin-left: 550px;
+    margin-left: 220px;
 }
 #cartaDoBot3 {
-    margin-left: 700px;
+    margin-left: -110px;
 }
 #cartaDoBot4 {
-    margin-left: 300px;
+    margin-left: -220px;
 }
 #cartaDoBot5 {
-    margin-left: 300px;
+    margin-left: -330px;
 }
 
 #cartaDaPessoa0 {
-    margin-left: 0px;
+
 }
 #cartaDaPessoa1 {
     margin-left: 110px;
 }
 #cartaDaPessoa2 {
-    margin-left: 550px;
+    margin-left: 220px;
 }
 #cartaDaPessoa3 {
-    margin-left: 700px;
+    margin-left: -110px;
 }
 #cartaDaPessoa4 {
-    margin-left: 300px;
+    margin-left: -220px;
 }
 #cartaDaPessoa5 {
-    margin-left: 300px;
+    margin-left: -330px;
 }
 
 

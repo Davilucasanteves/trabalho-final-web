@@ -54,18 +54,21 @@ function Rodada(){
         Palpite();
     } else {
         AtualizaSelect();
+        sortearCartasUnicas();
         AdicionaOutraCartaParaBot();
-        AdicionaOutraCartaParaPessoa();
+        // AdicionaOutraCartaParaPessoa();
     }
 }
 
 function EmbaralharCartas() {
+    if (rodada == 1) {
     MinhaCarta = Math.floor(Math.random() * Cartas.length);
     do {
         BotCarta = Math.floor(Math.random() * Cartas.length);
     } while (BotCarta == MinhaCarta);
     CartaDoBot();
     CartaDaPessoa();
+    } 
 }
 
 function CartaDoBot() {
@@ -114,7 +117,8 @@ function Vidas() {
         location.reload();
     } 
     rodada += 1;
-    FlipCarta();
+    // FlipCarta();
+    Rodada();
 }
 
 async function FlipCarta() {
@@ -129,6 +133,7 @@ async function FlipCarta() {
         }, 3000);
     });
     setTimeout(EmbaralharCartas, 200);
+    
 }
    
 // Segunda Rodada
@@ -143,7 +148,7 @@ const OpçõesDoSelect = [
     { valor: '6', texto: 'Faço seis' },
 ]
 
-function AtualizaSelect(){
+function AtualizaSelect() {
     const select = document.getElementById('palpite');
     select.innerHTML = '';
 
@@ -153,37 +158,66 @@ function AtualizaSelect(){
         option.textContent = OpçõesDoSelect[i].texto;
         select.appendChild(option);
     }
-   
 }
 
-function AdicionaOutraCartaParaBot(){
+function sortearCartasUnicas(qtdCartas) {
+    const cartasSorteadas = [];
+
+    while (cartasSorteadas.length < qtdCartas) {
+        const aleatorio = Math.floor(Math.random() * Cartas.length);
+        if (!cartasSorteadas.includes(aleatorio)) {
+            cartasSorteadas.push(aleatorio);
+        }
+    }
+    return cartasSorteadas;
+}
+
+function AdicionaOutraCartaParaBot() {
     const containerBot = document.querySelector('.containerBot');
     containerBot.innerHTML = '';
 
+    const cartasSorteadas = sortearCartasUnicas(rodada);
+
     for (let i = 0; i < rodada; i++) {
         let novaCarta = document.createElement('img');
         novaCarta.className = 'carta';
-        novaCarta.id = 'cartaDoBot' +i;
-        //EmbaralharCartas();
-        novaCarta.src = Cartas[3].caminho;
+        novaCarta.id = 'cartaDoBot' + i;
+
+        novaCarta.src = Cartas[cartasSorteadas[i]].caminho;
         containerBot.appendChild(novaCarta);
     }
+    AdicionaOutraCartaParaPessoa();
 }
 
-function AdicionaOutraCartaParaPessoa(){
+function AdicionaOutraCartaParaPessoa() {
     const containerDaPessoa = document.querySelector('.containerDaPessoa');
     containerDaPessoa.innerHTML = '';
-    
+
+    const cartasSorteadas = sortearCartasUnicas(rodada);
+
     for (let i = 0; i < rodada; i++) {
         let novaCarta = document.createElement('img');
         novaCarta.className = 'carta';
-        novaCarta.id = 'cartaDaPessoa' +i;
-        // EmbaralharCartas();
-        novaCarta.src = '/Cartas/verso.png';
+        novaCarta.id = 'cartaDaPessoa' + i;
+
+        novaCarta.src = Cartas[cartasSorteadas[i]].caminho;
         containerDaPessoa.appendChild(novaCarta);
     }
 }
 
-function EventoDeCliqueNasImagens(){
+var selectElement = document.getElementById('palpite');
+selectElement.addEventListener('change', function() {
+    var valorSelecionado = selectElement.value;
+    console.log('Opção selecionada: ' + valorSelecionado);
+    if(rodada !== 1)
+    selectElement.disabled = true;
+});
 
-}
+var imagens = document.querySelectorAll('.carta');
+imagens.forEach(function(imagem) {
+    imagem.addEventListener('click', function() {
+        alert('Você clicou na imagem!');
+    });
+});
+
+
