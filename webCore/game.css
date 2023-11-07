@@ -179,6 +179,12 @@ body {
     place-items: center; 
 }
 
+label {
+    font: 18pt sans-serif;
+    color:rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
 select {
     margin-top: 6px;
     width: auto;
@@ -186,10 +192,5 @@ select {
     text-align: center; 
 }
 
-label {
-    font: 18pt sans-serif;
-    color:rgb(255, 255, 255);
-    margin-top: 5px;
-}
 
                                                                                                                                                                                      
