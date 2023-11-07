@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
   
+/* @keyframes vira {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+} */
+
 header {
     width: 100vw;
     height: 70px;
@@ -125,13 +130,21 @@ body {
 
 /* Animação de flip para as cartas */
 .carta {
+    position: absolute;
     max-width: 100px;
     max-height: 200px;
-    position: absolute;
     top: 50%;
     left: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transform-style: preserve-3d;
     transform: translate(-50%, -50%); 
+    transition: all 0.5s ease;
+    animation-name: vira;
 }
+
+.carta:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
 /* .containerDaCarta {
     transition: transform 1s;
@@ -192,5 +205,10 @@ select {
     text-align: center; 
 }
 
+label {
+    font: 18pt sans-serif;
+    color:rgb(255, 255, 255);
+    margin-top: 5px;
+}
 
                                                                                                                                                                                      

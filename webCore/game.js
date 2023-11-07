@@ -91,6 +91,7 @@ function Palpite() {
         TotalVidasJogador -= 1;
     }
     Vidas();
+    FlipCarta();
 }
 
 function Vidas() {
@@ -118,7 +119,7 @@ function Vidas() {
     } 
     rodada += 1;
     // FlipCarta();
-    Rodada();
+    setTimeout(Rodada, 200);
 }
 
 async function FlipCarta() {
