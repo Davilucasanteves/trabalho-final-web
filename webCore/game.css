@@ -4,14 +4,9 @@
     box-sizing: border-box;
 }
   
-/* @keyframes vira {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(180deg);}
-} */
-
 header {
     width: 100vw;
-    height: 70px;
+    height: 15vh;
     display: grid;
     place-items: center; 
     background-color: rgba(157, 0, 0, 1);
@@ -28,11 +23,9 @@ body {
 
 
 /* Estilo para o sistema de vidas */
-
-
 #FotoDePerfilDoBot {
-    margin-top: 20px;
-    margin-left: 45px;
+    /* margin-top: 20px;
+    margin-left: 45px; */
 }
 
 #FotoDePerfilDaPessoa {
@@ -45,8 +38,8 @@ body {
 }
 
 #ÍconeDeVidaDoBot {
-    margin-left: 12px;
-    margin-bottom: 40%;
+    /* margin-left: 12px;
+    margin-bottom: 40%; */
 }
 
 #ÍconeDeVidaDaPessoa {
@@ -58,40 +51,44 @@ body {
     color: whitesmoke;
 }
 
+.ConteudoBot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* Estilo para as cartas  */
 .CoreGame {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    place-items: center;
+    grid-template-rows: 35vh 35vh;
 }
 
 .MostraVidas {
+    position: relative;
     grid-row: 1 / 3; 
+    grid-column: 1;
 }
 
 .containerBot {
     position: relative;
-   
 }
 
 .containerDaPessoa {
     position: relative;
-    perspective: 1000px;
 }
 
 .containerBaralho {
-    grid-row: 1 / 3;
-    grid-column: 3;
     position: relative;
+    grid-column: 3;
+    grid-row: 1 / 3;
+    
 }
 
 
 
 /* Configuração das cartas depois da Primeira Rodada */
-#cartaDoBot0 {
-   
-}
 #cartaDoBot1 {
     margin-left: 110px;
 }
@@ -108,9 +105,6 @@ body {
     margin-left: -330px;
 }
 
-#cartaDaPessoa0 {
-
-}
 #cartaDaPessoa1 {
     margin-left: 110px;
 }
@@ -135,50 +129,29 @@ body {
     max-height: 200px;
     top: 50%;
     left: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transform-style: preserve-3d;
     transform: translate(-50%, -50%); 
-    transition: all 0.5s ease;
-    animation-name: vira;
-}
+} 
 
-.carta:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
 
-/* .containerDaCarta {
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-  */
-.s {
-    position: absolute;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-.frente {
-    transform: rotateY(180deg);
+/* .frente {
+    transform: rotateY(0deg);
 }
 
 .verso {
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
 }
 
 .containerDaCarta.virada .frente {
-    transform: rotateY(180deg);
+    transform: rotateY(0deg);
 }
 
 .containerDaCarta.virada .verso {
-    transform: rotateY(180deg);
-    /* backface-visibility: hidden; */
-}
+    transform: rotateY(0deg);
+} */
 
    
 
-/* Animação de shuffle */
 
-
-/* Animação de retorno das cartas para o baralho */
 
 
 
@@ -186,16 +159,10 @@ body {
                                                   
 
 /* Estilo para o botão do select */
-
 .selectContainer {
     display: grid;
     place-items: center; 
-}
-
-label {
-    font: 18pt sans-serif;
-    color:rgb(255, 255, 255);
-    margin-top: 20px;
+    height: 15vh;
 }
 
 select {
