@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-input[type='text'] {
+input[type='text'], [type='password'], [type='email'] {
     font-size: 14pt;
     background-color: #d9d9d9;
     border: none;
@@ -52,6 +52,13 @@ input[type='text'] {
 ul {
     list-style: none;
 }
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover {
+    font-style: oblique;
+}
 
 #container {
     margin: auto;
@@ -80,6 +87,6 @@ ul {
     background-color: #4B4747;
     text-align: center;
     line-height: 20pt;
-    padding: 30px;
-    padding-top: 10px;
+    padding: 20px;
+    padding-top: 0px;
 }
