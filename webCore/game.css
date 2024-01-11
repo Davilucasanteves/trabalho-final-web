@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-  
 header {
     width: 100vw;
     height: 15vh;
@@ -11,47 +10,32 @@ header {
     place-items: center; 
     background-color: rgba(157, 0, 0, 1);
 }
-
 .logoTexto {
     font: 14pt sans-serif;
     color: whitesmoke;
 }
-
 body {
     background-color: rgb(24, 143, 54);
 }
 
-
 /* Estilo para o sistema de vidas */
 #FotoDePerfilDoBot {
-    /* margin-top: 20px;
-    margin-left: 45px; */
+    margin-left: 30px;
 }
-
 #FotoDePerfilDaPessoa {
-    margin-left: 75px;
+    margin-left: 30px;
 }
-
 .ÍconeDeVida {
-    font-size: 28pt;
-    letter-spacing: 6pt;
+    font-size: 35px;
+    letter-spacing: 3px;
 }
-
-#ÍconeDeVidaDoBot {
-    /* margin-left: 12px;
-    margin-bottom: 40%; */
-}
-
-#ÍconeDeVidaDaPessoa {
-    margin-left: 35px;
-}
-
-#TituloDaVida {
-    font: 18pt sans-serif;
-    color: whitesmoke;
-}
-
 .ConteudoBot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ConteudoPessoa {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,95 +45,103 @@ body {
 /* Estilo para as cartas  */
 .CoreGame {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1.2fr 3fr 1fr;
     grid-template-rows: 35vh 35vh;
 }
-
-.MostraVidas {
+.VidaDoBot {
     position: relative;
-    grid-row: 1 / 3; 
-    grid-column: 1;
 }
-
+.VidaDaPessoa {
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+}
 .containerBot {
     position: relative;
+    grid-column: 2;
 }
-
 .containerDaPessoa {
     position: relative;
 }
-
 .containerBaralho {
     position: relative;
     grid-column: 3;
     grid-row: 1 / 3;
-    
 }
-
-
-
-/* Configuração das cartas depois da Primeira Rodada */
-#cartaDoBot1 {
-    margin-left: 110px;
-}
-#cartaDoBot2 {
-    margin-left: 220px;
-}
-#cartaDoBot3 {
-    margin-left: -110px;
-}
-#cartaDoBot4 {
-    margin-left: -220px;
-}
-#cartaDoBot5 {
-    margin-left: -330px;
-}
-
-#cartaDaPessoa1 {
-    margin-left: 110px;
-}
-#cartaDaPessoa2 {
-    margin-left: 220px;
-}
-#cartaDaPessoa3 {
-    margin-left: -110px;
-}
-#cartaDaPessoa4 {
-    margin-left: -220px;
-}
-#cartaDaPessoa5 {
-    margin-left: -330px;
-}
-
-
-/* Animação de flip para as cartas */
 .carta {
-    position: absolute;
     max-width: 100px;
     max-height: 200px;
+} 
+#cartaBaralho {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-} 
-
-
-/* .frente {
-    transform: rotateY(0deg);
 }
 
-.verso {
-    transform: rotateY(0deg);
+
+/* Configuração das cartas depois da Primeira Rodada */
+#cartaDoBot0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+#cartaDoBot1 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot3 {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot4 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
 }
 
-.containerDaCarta.virada .frente {
-    transform: rotateY(0deg);
+#cartaDaPessoa0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-.containerDaCarta.virada .verso {
-    transform: rotateY(0deg);
-} */
-
-   
+#cartaDaPessoa1 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+#cartaDaPessoa2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+#cartaDaPessoa3 {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+#cartaDaPessoa4 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
 
 
 
@@ -157,7 +149,6 @@ body {
 
 
                                                   
-
 /* Estilo para o botão do select */
 .selectContainer {
     display: grid;
