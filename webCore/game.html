@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>AdivinheSô</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="game.css">
+        <link rel="shortcut icon" href="/imagens/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <div class="logoTexto">
+                <h1>AdivinheSô</h1>
+            </div>
+        </header>
+        <section class="CoreGame">
+
+            <div class="VidaDoBot">
+                <div class="ConteudoBot">
+                    <img id="FotoDePerfilDoBot" src="/imagens/IconBot.png">          
+                    <p class="ÍconeDeVida" id="ÍconeDeVidaDoBot">❤️❤️❤️</p>
+                </div>
+            </div>
+            
+            <div class="VidaDaPessoa">
+                <div class="ConteudoPessoa">
+                    <img id="FotoDePerfilDaPessoa" src="/imagens/IconPessoa.png"> 
+                    <p class="ÍconeDeVida" id="ÍconeDeVidaDaPessoa">❤️❤️❤️</p>
+                </div>
+            </div>
+
+            <div class="containerBot">
+                <img class="carta" id="cartaDoBot0" src=""> 
+            </div>
+
+            <div class="containerDaPessoa">
+                <img class="carta" id="cartaDaPessoa0" src="">
+                <img class="carta" id="cartaDaPessoa0" src="/Cartas/verso.png">    
+            </div>
+
+            <div class="containerBaralho">
+                <img class="carta" id="cartaBaralho" src="/Cartas/verso.png">
+            </div>
+        </section>
+        <div class="selectContainer">   
+            <label>Escolha uma opção e logo após pressione uma tecla:</label>
+            <select id="palpite" onkeydown="Rodada()">
+                <option value="0">Eu não faço!</option>
+                <option value="1">Eu faço!</option>
+            </select>
+        </div>
+        <script src="game.js"></script>
+    </body> 
+</html>  
