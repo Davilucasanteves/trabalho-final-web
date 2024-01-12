@@ -4,18 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>AdivinheSô</title>
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+    <title>Login</title>
 </head>
 <body>
-  
     <header>
-        <h1> Bem vindo! Venha ser um fdp [que nem Davì(seu pai)]</h1>
+        <div id="cabeçalho">
+            <h1>AdivinheSô</h1>
+        </div>
     </header>
-    <section>
-        <ul>
-            <li><a href="webCore/game.html">AdivinheSô</a></li>
-        </ul>   
+    <section id="informações">
+
+        <div>
+            E-Mail: <br>
+            Senha: <br>
+        </div>
+
+        <div>
+            <input type="email" placeholder="marcaojbl@email.com" id="email"><br>
+            <input type="password" placeholder="•••••" id="senha"><br>
+        </div>
+
     </section>
-   
+
+    <div id="botão">
+        <button id="submete">Logar</button>
+        <p style="margin-top: 10pt; font-size: 14pt;">Ainda não é cadastrado? <a style="color: rgb(71, 71, 71);" id="btn-login" href="/teste de páginas/pg_cadastro.html">Fazer cadastro</a></p>
+    </div>
+
+    <footer id="rodapé">
+        <div id="container">
+        <p id="colab">Colaboradores:</p>
+            <div class="linha">
+                <div id="nomes">
+                    <ul>
+                        <li><a target=”_blank” href="https://www.instagram.com/_davilucasant?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Daví Lucas</a></li>
+                        <li><a target=”_blank” href="https://www.instagram.com/neres_renatto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Renato Neres</a></li>
+                        <li><a target=”_blank” href="https://www.instagram.com/ronancouto_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Ronan Mendes</a></li>
+                    </ul>
+                </div>
+                <div id="nomes">
+                    <ul>
+                        <li><a target=”_blank” href="https://www.instagram.com/samuel.cairess?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Samuel Caires</a></li>
+                        <li><a target=”_blank” href="https://www.instagram.com/thallys_hv?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Thallys Henriques</a></li>
+                        <li><a target=”_blank” href="https://www.instagram.com/walissonfernandesdias/">Walisson Fernandes</a></li>
+                    </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/index.js"></script>
 </body>
 </html>
