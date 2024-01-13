@@ -5,16 +5,16 @@ var TotalVidasBot = 3;
 var rodada = 1;
 
 const Cartas = [
-    { valor:  0,  caminho: '/Cartas/4-de-paus.png'},
-    { valor:  1,  caminho: '/Cartas/7-de-copas.png'},
-    { valor:  2,  caminho: '/Cartas/ás-de-espadas.png'},
-    { valor:  3,  caminho: '/Cartas/7-de-ouros.png'},
-    { valor:  4,  caminho: '/Cartas/3-de-paus.png'},
-    { valor:  5,  caminho: '/Cartas/3-de-copas.png'},
-    { valor:  6,  caminho: '/Cartas/3-de-espadas.png'},
-    { valor:  7,  caminho: '/Cartas/3-de-ouros.png'},
-    { valor:  8,  caminho: '/Cartas/2-de-paus.png'},
-    { valor:  9,  caminho: '/Cartas/2-de-copas.png'},
+    { valor:  0, caminho: '/Cartas/4-de-paus.png'},
+    { valor:  1, caminho: '/Cartas/7-de-copas.png'},
+    { valor:  2, caminho: '/Cartas/ás-de-espadas.png'},
+    { valor:  3, caminho: '/Cartas/7-de-ouros.png'},
+    { valor:  4, caminho: '/Cartas/3-de-paus.png'},
+    { valor:  5, caminho: '/Cartas/3-de-copas.png'},
+    { valor:  6, caminho: '/Cartas/3-de-espadas.png'},
+    { valor:  7, caminho: '/Cartas/3-de-ouros.png'},
+    { valor:  8, caminho: '/Cartas/2-de-paus.png'},
+    { valor:  9, caminho: '/Cartas/2-de-copas.png'},
     { valor: 10, caminho: '/Cartas/2-de-espadas.png'},
     { valor: 11, caminho: '/Cartas/2-de-ouros.png'},
     { valor: 12, caminho: '/Cartas/ás-de-paus.png'},
@@ -47,38 +47,38 @@ const Cartas = [
     { valor: 39, caminho: '/Cartas/4-de-ouros.png'}
 ]
 
-EmbaralharCartas();
+embaralharCartas();
 
 function Rodada(){
     if(rodada == 1) {
-        Palpite();
+        palpite();
     } else {
         rodada2();
     }
 }
 
-function EmbaralharCartas() {
+function embaralharCartas() {
     if (rodada == 1) {
         MinhaCarta = Math.floor(Math.random() * Cartas.length);
     do {
         BotCarta = Math.floor(Math.random() * Cartas.length);
     } while (BotCarta == MinhaCarta);
-    CartaDoBot();
-    CartaDaPessoa();
+    cartaDoBot();
+    cartaDaPessoa();
     } 
 }
 
-function CartaDoBot() {
+function cartaDoBot() {
     let CartaAtualDoBot = document.getElementById('cartaDoBot0');
     CartaAtualDoBot.src = Cartas[BotCarta].caminho;
 }
 
-function CartaDaPessoa() {
+function cartaDaPessoa() {
     let CartaAtualPessoa = document.getElementById('cartaDaPessoa0');
     CartaAtualPessoa.src = Cartas[MinhaCarta].caminho;
 }
 
-function Palpite() {
+function palpite() {
     let valorSelecionado = document.getElementById('palpite').value;
     if ( BotCarta > MinhaCarta && valorSelecionado == '1' || BotCarta < MinhaCarta && valorSelecionado == '0' ) {
         alert('Você acertou!');
@@ -87,10 +87,10 @@ function Palpite() {
         alert('Você errou!');
         TotalVidasJogador -= 1;
     }
-    Vidas();
+    vidas();
 }
 
-function Vidas() {
+function vidas() {
     let vidasBot = document.getElementById('ÍconeDeVidaDoBot');
     let vidasJogador = document.getElementById('ÍconeDeVidaDaPessoa');
 
@@ -113,7 +113,7 @@ function Vidas() {
         alert("Você perdeu para o bot!");
         location.reload();
     } 
-    rodada += 3;
+    rodada += 1;
     Rodada();
 }
 
@@ -132,15 +132,16 @@ function Vidas() {
     
 // }
    
-// Segunda Rodada
 
+// Segunda Rodada
 function rodada2(){
     AtualizaSelect();
     RetornoDoArray();
+   
     
 }
-
 const OpçõesDoSelect = [
+    { texto: 'Escolha seu palpite'},
     { valor: '0', texto: 'Faço nenhuma' },
     { valor: '1', texto: 'Faço uma' },
     { valor: '2', texto: 'Faço duas' },
@@ -149,19 +150,17 @@ const OpçõesDoSelect = [
     { valor: '5', texto: 'Faço cinco' },
     { valor: '6', texto: 'Faço seis' },
 ]
-
 function AtualizaSelect() {
     const select = document.getElementById('palpite');
     select.innerHTML = '';
 
-    for (let i = 0; i <= rodada; i++) {
+    for (let i = 0; i <= rodada +1; i++) {
         var option = document.createElement('option');
         option.value = OpçõesDoSelect[i].valor;
         option.textContent = OpçõesDoSelect[i].texto;
         select.appendChild(option);
     }
 }
-
 function sortearCartasUnicas() {
     let quantidadeCartas = rodada * 2;
     let cartasSorteadas = [];
@@ -176,72 +175,128 @@ function sortearCartasUnicas() {
     const metade = Math.floor(cartasSorteadas.length / 2);
     const cartasParaPessoa = cartasSorteadas.slice(0, metade);
     const cartasParaBot = cartasSorteadas.slice(metade);
-    console.log('carta da Pessoa', cartasParaPessoa);
-    console.log('carta do Bot', cartasParaBot);
 
     return [cartasParaPessoa, cartasParaBot];
 
 }
-
 function RetornoDoArray(){
     let [cartaDaPessoa, cartaDoBot] = sortearCartasUnicas();
-    AdicionaOutraCartaParaPessoa(cartaDaPessoa);
+    AdicionaOutraCartaParaPessoa(cartaDaPessoa, cartaDoBot);
     AdicionaOutraCartaParaBot(cartaDoBot);
 }
-
 function AdicionaOutraCartaParaBot(Bot) {
     const containerBot = document.querySelector('.containerBot');
     containerBot.innerHTML = '';
-    console.log(Array.isArray(Bot)); 
+    console.log('Conteúdo de Bot:', Bot);
 
     for (let i = 0; i < rodada; i++) {
         let frenteCarta = document.createElement('img');
         frenteCarta.className = 'carta';
         frenteCarta.id = 'cartaDoBot' + i;
-
-        console.log('Conteúdo de Bot:', Bot);
-        console.log('sacah BOT', Cartas[Bot[i]]);
         frenteCarta.src = Cartas[Bot[i]].caminho;
         containerBot.appendChild(frenteCarta);
 
         let versoCarta = document.createElement('img');
         versoCarta.className = 'carta';
-        versoCarta.id = 'cartaDoBot' + i;
+        versoCarta.id = 'cartaDoBotVerso' + i;
         versoCarta.src = "/Cartas/verso.png";
         containerBot.appendChild(versoCarta);
     }
 }
-
-function AdicionaOutraCartaParaPessoa(Pessoa) {
+function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
     const containerDaPessoa = document.querySelector('.containerDaPessoa');
     containerDaPessoa.innerHTML = '';
-   
-    console.log(Array.isArray(Pessoa)); 
+    console.log('Conteúdo de Pessoa:', Pessoa);
 
     for (let i = 0; i < rodada; i++) {
         let frenteCarta = document.createElement('img');
         frenteCarta.className = 'carta';
         frenteCarta.id = 'cartaDaPessoa' + i;
-        console.log('Conteúdo de Pessoa:', Pessoa);
-        console.log('sacah PESSOA', Cartas[Pessoa[i]]);
         frenteCarta.src = Cartas[Pessoa[i]].caminho;
         containerDaPessoa.appendChild(frenteCarta);
+
+        frenteCarta.addEventListener('click', function() {
+            if (selectOculto) {
+                jogadaDoBot(Bot);
+            } else {
+                alert('Selecione seu palpite');
+            }
+        });
     }
 }
 
-// var selectElement = document.getElementById('palpite');
-// selectElement.addEventListener('change', function() {
-//     var valorSelecionado = selectElement.value;
-//     console.log('Opção selecionada: ' + valorSelecionado);
-//     if(rodada !== 1)
-//     selectElement.disabled = true;
-// });
+var selectElement = document.getElementById('palpite');
+selectElement.addEventListener('change', function() {
+    geraPalpite();
+    
+});
 
-// var imagens = document.querySelectorAll('.carta');
-// imagens.forEach(function(imagem) {
-//     imagem.addEventListener('click', function() {
-//         alert('Você clicou na imagem!');
-//     });
-// });
+function geraPalpite () {
+    if(rodada !== 1) {
+        var palpitePessoa = parseInt(selectElement.value, 10);
+        var palpiteBot;
+        do {
+            palpiteBot = Math.floor(Math.random() * rodada + 1);
+        } while (palpitePessoa + palpiteBot == rodada);
+        
+        selectElement.disabled = true;
+        selectOculto = true;
+        mostraPalpite (palpitePessoa, palpiteBot);
+    }
+}
+
+function mostraPalpite (pessoa, bot) {
+    var selecionaBot = document.querySelector(".ConteudoBot");
+    var selecionaPessoa = document.querySelector(".ConteudoPessoa");
+
+    var palpiteBot = bot;
+    var palpitePessoa = pessoa;
+
+    var fraseDoBot = document.createElement('p');
+    fraseDoBot.textContent = "Palpite do Bot: " + palpiteBot;
+    selecionaBot.appendChild(fraseDoBot);
+
+    var fraseDaPessoa =  document.createElement('p');
+    fraseDaPessoa.textContent = "Palpite da Pessoa: " + palpitePessoa;
+    selecionaPessoa.appendChild(fraseDaPessoa);
+}   
+
+
+
+// Bot contra a pessoa
+
+var selectOculto = false;
+var jaUsadas = [];
+function jogadaDoBot (Bot) { 
+    
+    do {
+        var cartaEscolhidaDoBot = Bot[Math.floor(Math.random() * rodada)];
+    } while (jaUsadas.includes(cartaEscolhidaDoBot));
+
+    jaUsadas.push(cartaEscolhidaDoBot);
+    // alert('O bot jogou a carta de valor: ' + cartaEscolhidaDoBot);
+
+
+    var posição = Bot.indexOf(cartaEscolhidaDoBot);
+
+    var idCarta = "cartaDoBotVerso" + posição;
+    var removerVerso = document.getElementById(idCarta)
+    removerVerso.remove();
+    
+}
+
+function Comparacao () {
+    if (valorSelecionado){
+        palpiteBot = palpitePessoa
+
+        cartaEscolhidaDoBot
+        cartaEscolhidaDaPessoa
+    }
+}
+
+
+
+
+
 
 
