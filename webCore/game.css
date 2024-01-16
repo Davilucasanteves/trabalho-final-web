@@ -62,7 +62,7 @@ body {
 }
 .containerDaPessoa {
     position: relative;
-}
+} 
 .containerBaralho {
     position: relative;
     grid-column: 3;
@@ -85,14 +85,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 #cartaDoBot1 {
     position: absolute;
     top: 50%;
     left: 33%;
     transform: translate(-50%, -50%);
-}
+    }
 #cartaDoBot2 {
     position: absolute;
     top: 50%;
@@ -117,25 +117,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); 
 }
-#cartaDoBotVerso1 {
+#cartaDoBot1, #cartaDoBotVerso1  {
     position: absolute;
     top: 50%;
     left: 33%;
     transform: translate(-50%, -50%);
 }
-#cartaDoBotVerso2 {
+#cartaDoBot2, #cartaDoBotVerso2 {
     position: absolute;
     top: 50%;
     left: 16.13%;
     transform: translate(-50%, -50%);
 }
-#cartaDoBotVerso3 {
+#cartaDoBot3, #cartaDoBotVerso3 {
     position: absolute;
     top: 50%;
     left: 67%;
     transform: translate(-50%, -50%);
 }
-#cartaDoBotVerso4 {
+#cartaDoBot4, #cartaDoBotVerso4 {
     position: absolute;
     top: 50%;
     left: 84%;

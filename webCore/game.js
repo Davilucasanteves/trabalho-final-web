@@ -113,32 +113,28 @@ function vidas() {
         alert("Você perdeu para o bot!");
         location.reload();
     } 
-    rodada += 1;
+    rodada += 1; 
     Rodada();
 }
 
-// async function FlipCarta() {
-//     let containerDaPessoa = document.querySelector('.containerDaPessoa');
-  
+// function FlipCarta() {
+//     var containerDaPessoa = document.querySelector('.containerPessoa');
+
 //     containerDaPessoa.classList.add('virada');
-  
-//     await new Promise(function (resolve) {
-//         setTimeout(function () {
-//             containerDaPessoa.classList.remove('virada');
-//             resolve(); 
-//         }, 3000);
-//     });
-//     setTimeout(EmbaralharCartas, 200);
     
+//     setTimeout(function () {
+//         containerDaPessoa.classList.remove('virada');
+//     }, 3000);
+//     
+//     setTimeout(Rodada, 10000);
 // }
-   
+
+
 
 // Segunda Rodada
-function rodada2(){
+function rodada2() {
     AtualizaSelect();
     RetornoDoArray();
-   
-    
 }
 const OpçõesDoSelect = [
     { texto: 'Escolha seu palpite'},
