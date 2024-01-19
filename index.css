@@ -26,13 +26,14 @@ input[type='text'], [type='password'], [type='email'] {
     text-align: right;
     font-size: 14pt;
     line-height: 35px;
-    padding-left: 35%;
+    padding-left: 36%;
     padding-top: 10%;
 }
 
 #botão {
     padding-top:12px;
     text-align: center;
+    margin-right: -50px;
 }
 
 #submete {

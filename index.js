@@ -1,4 +1,27 @@
 // parte funcional do código de login irá aqui
+fetch('https://back-end-tf-web.vercel.app/login', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'aplication/json'
+    },
+    body: JSON.stringify({
+        senha: '8',
+        email: 'david@gmailcom'
+    })
+}) .then(res => {
+        if (res.ok) {
+            console.log('SUCCESS')
+            return res.json()
+        } else{
+            console.log("Not Successful")
+        }
+    })
+    .then(data => console.log(data))
+    .catch(error => console.log('ERROR'))
+
+
+
+/*
 
 const myForm = document.getElementById("myForm");
 myForm.addEventListener('submit', function(e){
@@ -23,3 +46,4 @@ myForm.addEventListener('submit', function(e){
     })
 })
 
+*/
