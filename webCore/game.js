@@ -40,6 +40,9 @@ const Cartas = [
     { valor: 38, caminho: '/Cartas/5-de-espadas.png'},
     { valor: 39, caminho: '/Cartas/4-de-ouros.png'}
 ]
+var BotCarta;  
+var MinhaCarta; 
+
 var rodada = 1;
 embaralharCartas();
 
@@ -51,23 +54,20 @@ function Rodada(){
     }
 }
 function embaralharCartas() {
-    var BotCarta;  
-    var MinhaCarta; 
-
     if (rodada == 1) {
         MinhaCarta = Math.floor(Math.random() * Cartas.length);
     do {
         BotCarta = Math.floor(Math.random() * Cartas.length);
     } while (BotCarta == MinhaCarta);
-    cartaDoBot(BotCarta);
-    cartaDaPessoa(MinhaCarta);
+    cartaDoBot();
+    cartaDaPessoa();
     } 
 }
-function cartaDoBot(BotCarta) {
+function cartaDoBot() {
     let CartaAtualDoBot = document.getElementById('cartaDoBot0');
     CartaAtualDoBot.src = Cartas[BotCarta].caminho;
 }
-function cartaDaPessoa(MinhaCarta) {
+function cartaDaPessoa() {
     let CartaAtualPessoa = document.getElementById('cartaDaPessoa0');
     CartaAtualPessoa.src = Cartas[MinhaCarta].caminho;
 }

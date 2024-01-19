@@ -69,8 +69,8 @@ body {
     grid-row: 1 / 3;
 }
 .carta {
-    max-width: 100px;
-    max-height: 200px;
+    max-width: 110px;
+    max-height: 210px;
 } 
 #cartaBaralho {
     position: absolute;
