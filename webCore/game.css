@@ -62,15 +62,15 @@ body {
 }
 .containerDaPessoa {
     position: relative;
-}
+} 
 .containerBaralho {
     position: relative;
     grid-column: 3;
     grid-row: 1 / 3;
 }
 .carta {
-    max-width: 100px;
-    max-height: 200px;
+    max-width: 110px;
+    max-height: 210px;
 } 
 #cartaBaralho {
     position: absolute;
@@ -85,30 +85,60 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 #cartaDoBot1 {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 33%;
     transform: translate(-50%, -50%);
-}
+    }
 #cartaDoBot2 {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 16.13%;
     transform: translate(-50%, -50%);
 }
 #cartaDoBot3 {
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 67%;
     transform: translate(-50%, -50%);
 }
 #cartaDoBot4 {
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBotVerso0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+#cartaDoBot1, #cartaDoBotVerso1  {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot2, #cartaDoBotVerso2 {
+    position: absolute;
+    top: 50%;
+    left: 16.13%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot3, #cartaDoBotVerso3 {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+#cartaDoBot4, #cartaDoBotVerso4 {
+    position: absolute;
+    top: 50%;
+    left: 84%;
     transform: translate(-50%, -50%);
 }
 
@@ -121,48 +151,41 @@ body {
 #cartaDaPessoa1 {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 33%;
     transform: translate(-50%, -50%);
 }
 #cartaDaPessoa2 {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 16.13%;
     transform: translate(-50%, -50%);
 }
 #cartaDaPessoa3 {
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 67%;
     transform: translate(-50%, -50%);
 }
 #cartaDaPessoa4 {
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 84%;
     transform: translate(-50%, -50%);
 }
 
 
-
-
-
-
-                                                  
 /* Estilo para o botão do select */
 .selectContainer {
     display: grid;
     place-items: center; 
     height: 15vh;
 }
-
 select {
     margin-top: 6px;
     width: auto;
     font-size: 18px;
     text-align: center; 
 }
-
 label {
     font: 18pt sans-serif;
     color:rgb(255, 255, 255);
