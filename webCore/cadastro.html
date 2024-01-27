@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
     <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
     <header>
@@ -15,30 +15,26 @@
     </header>
     <section id="informações">
 
-        <form class="form" id="myForm">
-            <label for="username">E-mail: </label> 
-            <input type="text" name="email" id="email"> <br>
-            <label for="senha">Senha: </label>
-            <input type="text" name="senha" id="senha">
-            <div id="botão">
-                <button id="submete">Logar</button>
-                <p style="margin-top: 10pt; font-size: 14pt;">Ainda não é cadastrado? <a style="color: rgb(71, 71, 71);" id="btn-login" href="/webCore/cadastro.html">Fazer cadastro</a></p>
-            </div>
-        </form>
-
-
-<!--         
         <div>
+            Nome: <br>
             E-Mail: <br>
             Senha: <br>
+            Confirmação da senha: <br>
         </div>
 
         <div>
+            <input type="text" placeholder="MarcaodaJBL4224" id="nome"><br>
             <input type="email" placeholder="marcaojbl@email.com" id="email"><br>
             <input type="password" placeholder="•••••" id="senha"><br>
-        </div> -->
+            <input type="password" placeholder="•••••" id="confirmaSenha"><br>
+        </div>
 
     </section>
+
+    <div id="botão">
+        <button id="submete">Cadastrar-se</button>
+        <p style="margin-top: 10pt; font-size: 14pt;">Já é cadastrado? <a style="color: rgb(71, 71, 71);" id="btn-login" href="../index.html">Fazer login</a></p>
+    </div>
 
     <footer id="rodapé">
         <div id="container">
@@ -61,6 +57,6 @@
         </div>
     </footer>
     
-    <script src="/index.js"></script>
+    <script src="/webCore/cadastro.js"></script>
 </body>
 </html>
