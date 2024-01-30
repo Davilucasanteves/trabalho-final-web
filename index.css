@@ -5,13 +5,6 @@
     font-family: sans-serif;
 }
 
-input[type='text'], [type='password'], [type='email'] {
-    font-size: 14pt;
-    background-color: #d9d9d9;
-    border: none;
-    padding-left: 3px;
-}
-
 #cabeçalho {
     font-size: 14pt;
     color: whitesmoke;
@@ -22,41 +15,27 @@ input[type='text'], [type='password'], [type='email'] {
 
 #informações {
     display: flex;
-    gap: 10px;
-    text-align: right;
+    text-align: center;
     font-size: 14pt;
     line-height: 35px;
     padding-left: 36%;
     padding-top: 10%;
 }
 
-#botão {
-    padding-top:12px;
-    text-align: center;
-    margin-right: -50px;
-}
-
-#submete {
-    text-align: center;
-    font-size: 14pt;
-    border: none;
-    background-color: #d9d9d9;
-    padding: 4px;
-    cursor: pointer;
-    
-} #cadastra:hover {
-    background-color: #b6b4b4;
-} #cadastra:active {
-    background-color: #d9d9d9;
+#cadastrar {
+    color: black;
+    font-size: 11pt;
 }
 
 ul {
     list-style: none;
 }
+
 a {
     color: whitesmoke;
     text-decoration: none;
 }
+
 a:hover {
     font-style: oblique;
 }
