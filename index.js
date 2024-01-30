@@ -1,49 +1,54 @@
-// parte funcional do código de login irá aqui
-fetch('https://back-end-tf-web.vercel.app/login', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'aplication/json'
-    },
-    body: JSON.stringify({
-        senha: '8',
-        email: 'david@gmailcom'
-    })
-}) .then(res => {
-        if (res.ok) {
-            console.log('SUCCESS')
-            return res.json()
-        } else{
-            console.log("Not Successful")
-        }
-    })
-    .then(data => console.log(data))
-    .catch(error => console.log('ERROR'))
+const form = document.getElementById("form");
+form.addEventListener("submit", logSubmit);
 
+function logSubmit(event) {
+    event.preventDefault();
 
-
-/*
-
-const myForm = document.getElementById("myForm");
-myForm.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    const formData = new FormData(this);
-    const searchParams = new URLSearchParams();
-
-    for (const pair of FormData){
-        searchParams.append(pair[0]. pair[1])
+        const formEmail = document.getElementById("email");
+        const formSenha = document.getElementById("senha");
+        
+    const inforeq = {
+        method: 'POST',
+        body: JSON.stringify({
+            email: formEmail.value,
+            senha: formSenha.value,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
     }
 
-    fetch('/api/src/routes/login.js', {
-        method: 'post',
-        body: searchParams
-    }).then(function (response){
-        return response.text();
-    }).then(function (text) {
-        console.log(text);
-    }).catch(function (error) {
-        console.error(error);
-    })
-})
+    fetch("https://back-end-tf-web.vercel.app/usuario/login", inforeq)
+        .then(function (res) {
+            return res.json(); // converte a resposta para JSON
+        })
+        .then((data) => {
+            mostraUsuario(data.token);
+        }).catch((erro) => {
+            console.log('Erro na requisição:', erro);
+        });
+}
 
-*/
+function mostraUsuario(token) {
+    const inforeq = {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'x-access-token': token,
+        },
+    }
+    fetch("https://back-end-tf-web.vercel.app/usuarios/", inforeq)
+        .then(function (res) {
+            return res.json();
+        })
+        .then((data) => {
+            if (data.message == "Entidade não Autenticada") {
+                alert('Senha ou Email incorreto');
+            } else {
+                window.location.href = 'https://trabalho-final-web-davi.vercel.app/webCore/game.html'
+            }
+        }).catch(
+            (error) => console.log(error)
+        );
+
+}
