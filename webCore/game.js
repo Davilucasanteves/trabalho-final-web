@@ -1,44 +1,44 @@
 const Cartas = [
-    { valor:  0, caminho: '/Cartas/4-de-paus.png'},
-    { valor:  1, caminho: '/Cartas/7-de-copas.png'},
-    { valor:  2, caminho: '/Cartas/ás-de-espadas.png'},
-    { valor:  3, caminho: '/Cartas/7-de-ouros.png'},
-    { valor:  4, caminho: '/Cartas/3-de-paus.png'},
-    { valor:  5, caminho: '/Cartas/3-de-copas.png'},
-    { valor:  6, caminho: '/Cartas/3-de-espadas.png'},
-    { valor:  7, caminho: '/Cartas/3-de-ouros.png'},
-    { valor:  8, caminho: '/Cartas/2-de-paus.png'},
-    { valor:  9, caminho: '/Cartas/2-de-copas.png'},
-    { valor: 10, caminho: '/Cartas/2-de-espadas.png'},
-    { valor: 11, caminho: '/Cartas/2-de-ouros.png'},
-    { valor: 12, caminho: '/Cartas/ás-de-paus.png'},
-    { valor: 13, caminho: '/Cartas/ás-de-copas.png'},
-    { valor: 14, caminho: '/Cartas/ás-de-ouros.png'},
-    { valor: 15, caminho: '/Cartas/rei-de-paus.png'},
-    { valor: 16, caminho: '/Cartas/rei-de-copas.png'},
-    { valor: 17, caminho: '/Cartas/rei-de-espadas.png'},
-    { valor: 18, caminho: '/Cartas/rei-de-ouros.png'},
-    { valor: 19, caminho: '/Cartas/valete-de-paus.png'},
-    { valor: 20, caminho: '/Cartas/valete-de-copas.png'},
-    { valor: 21, caminho: '/Cartas/valete-de-espadas.png'},
-    { valor: 22, caminho: '/Cartas/valete-de-ouros.png'},
-    { valor: 23, caminho: '/Cartas/dama-de-paus.png'},
-    { valor: 24, caminho: '/Cartas/dama-de-copas.png'},
-    { valor: 25, caminho: '/Cartas/dama-de-espadas.png'},
-    { valor: 26, caminho: '/Cartas/dama-de-ouros.png'},
-    { valor: 27, caminho: '/Cartas/7-de-paus.png'},
-    { valor: 28, caminho: '/Cartas/7-de-espadas.png'},
-    { valor: 29, caminho: '/Cartas/6-de-paus.png'},
-    { valor: 30, caminho: '/Cartas/6-de-copas.png'},
-    { valor: 31, caminho: '/Cartas/6-de-espadas.png'},
-    { valor: 32, caminho: '/Cartas/6-de-ouros.png'},
-    { valor: 33, caminho: '/Cartas/5-de-paus.png'},
-    { valor: 34, caminho: '/Cartas/5-de-copas.png'},
-    { valor: 35, caminho: '/Cartas/5-de-espadas.png'},
-    { valor: 36, caminho: '/Cartas/5-de-ouros.png'},
-    { valor: 37, caminho: '/Cartas/5-de-copas.png'},
-    { valor: 38, caminho: '/Cartas/5-de-espadas.png'},
-    { valor: 39, caminho: '/Cartas/4-de-ouros.png'}
+    { valor:  0, caminho: '../Cartas/4-de-paus.png'},
+    { valor:  1, caminho: '../Cartas/7-de-copas.png'},
+    { valor:  2, caminho: '../Cartas/ás-de-espadas.png'},
+    { valor:  3, caminho: '../Cartas/7-de-ouros.png'},
+    { valor:  4, caminho: '../Cartas/3-de-paus.png'},
+    { valor:  5, caminho: '../Cartas/3-de-copas.png'},
+    { valor:  6, caminho: '../Cartas/3-de-espadas.png'},
+    { valor:  7, caminho: '../Cartas/3-de-ouros.png'},
+    { valor:  8, caminho: '../Cartas/2-de-paus.png'},
+    { valor:  9, caminho: '../Cartas/2-de-copas.png'},
+    { valor: 10, caminho: '../Cartas/2-de-espadas.png'},
+    { valor: 11, caminho: '../Cartas/2-de-ouros.png'},
+    { valor: 12, caminho: '../Cartas/ás-de-paus.png'},
+    { valor: 13, caminho: '../Cartas/ás-de-copas.png'},
+    { valor: 14, caminho: '../Cartas/ás-de-ouros.png'},
+    { valor: 15, caminho: '../Cartas/rei-de-paus.png'},
+    { valor: 16, caminho: '../Cartas/rei-de-copas.png'},
+    { valor: 17, caminho: '../Cartas/rei-de-espadas.png'},
+    { valor: 18, caminho: '../Cartas/rei-de-ouros.png'},
+    { valor: 19, caminho: '../Cartas/valete-de-paus.png'},
+    { valor: 20, caminho: '../Cartas/valete-de-copas.png'},
+    { valor: 21, caminho: '../Cartas/valete-de-espadas.png'},
+    { valor: 22, caminho: '../Cartas/valete-de-ouros.png'},
+    { valor: 23, caminho: '../Cartas/dama-de-paus.png'},
+    { valor: 24, caminho: '../Cartas/dama-de-copas.png'},
+    { valor: 25, caminho: '../Cartas/dama-de-espadas.png'},
+    { valor: 26, caminho: '../Cartas/dama-de-ouros.png'},
+    { valor: 27, caminho: '../Cartas/7-de-paus.png'},
+    { valor: 28, caminho: '../Cartas/7-de-espadas.png'},
+    { valor: 29, caminho: '../Cartas/6-de-paus.png'},
+    { valor: 30, caminho: '../Cartas/6-de-copas.png'},
+    { valor: 31, caminho: '../Cartas/6-de-espadas.png'},
+    { valor: 32, caminho: '../Cartas/6-de-ouros.png'},
+    { valor: 33, caminho: '../Cartas/5-de-paus.png'},
+    { valor: 34, caminho: '../Cartas/5-de-copas.png'},
+    { valor: 35, caminho: '../Cartas/5-de-espadas.png'},
+    { valor: 36, caminho: '../Cartas/5-de-ouros.png'},
+    { valor: 37, caminho: '../Cartas/5-de-copas.png'},
+    { valor: 38, caminho: '../Cartas/5-de-espadas.png'},
+    { valor: 39, caminho: '../Cartas/4-de-ouros.png'}
 ]
 var BotCarta;  
 var MinhaCarta; 
@@ -76,8 +76,6 @@ var TotalVidasJogador = 3;
 var TotalVidasBot = 3;
 
 function palpite() {
-    
-
     let valorSelecionado = document.getElementById('palpite').value;
     if ( BotCarta > MinhaCarta && valorSelecionado == '1' || BotCarta < MinhaCarta && valorSelecionado == '0' ) {
         alert('Você acertou!');
@@ -113,29 +111,29 @@ function vidas() {
     } 
     rodada++; 
     if (rodada == 2){
-        Rodada();
+        var primeiraCartaDoVersoDaPessoa = document.getElementById('cartaDaPessoaVerso0');
+        primeiraCartaDoVersoDaPessoa.remove();
+        document.getElementById("palpite").removeAttribute("onchange");
+        setTimeout(Rodada, 1000);
     }
 }
-
-// function FlipCarta() {
-//     var containerDaPessoa = document.querySelector('.containerPessoa');
-
-//     containerDaPessoa.classList.add('virada');
-    
-//     setTimeout(function () {
-//         containerDaPessoa.classList.remove('virada');
-//     }, 3000);
-//     
-//     setTimeout(Rodada, 10000);
-// }
-
 
 
 // Segunda Rodada
 function rodada2() {
     AtualizaSelect();
     sortearCartasUnicas();
+    controlaChangeSelect = true;
 }
+var controlaChangeSelect = false;
+
+var selectElement = document.getElementById('palpite');
+selectElement.addEventListener('change', function() {
+    if (controlaChangeSelect) {
+        geraPalpite(); 
+    }
+
+});
 function AtualizaSelect() {
     const OpçõesDoSelect = [
         { texto: 'Escolha seu palpite'},
@@ -188,11 +186,13 @@ function AdicionaOutraCartaParaBot(Bot) {
         let versoCarta = document.createElement('img');
         versoCarta.className = 'carta';
         versoCarta.id = 'cartaDoBotVerso' + i;
-        versoCarta.src = "/Cartas/verso.png";
+        versoCarta.src = "../Cartas/verso.png";
         containerBot.appendChild(versoCarta);
     }
 }
+
 var cartasClicadas = 0;
+
 function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
     const containerDaPessoa = document.querySelector('.containerDaPessoa');
     containerDaPessoa.innerHTML = '';
@@ -208,6 +208,7 @@ function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
             if (selectOculto) {
                 cartaEscolhidaDaPessoa = Cartas[Pessoa[i]].valor;
                 evento.target.removeEventListener('click', arguments.callee);
+                
                 cartasClicadas++;
                 if (cartasClicadas < rodada){
                     jogadaDoBot(Bot, cartaEscolhidaDaPessoa);
@@ -218,12 +219,12 @@ function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
                     if (palpitePessoa == 0){
                         TotalVidasJogador = TotalVidasJogador;
                     } else{
-                        TotalVidasJogador--
+                        TotalVidasJogador--;
                     }
                     if (palpiteBot == 0){
                         TotalVidasBot = TotalVidasBot;
                     } else {
-                        TotalVidasBot--
+                        TotalVidasBot--;
                     }
                     vidas();
                     selectElement.disabled = false;
@@ -231,8 +232,6 @@ function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
                     cartasClicadas = 0;
                     jaUsadas = [];
                     setTimeout(rodada2, 1500);
-                    
-                
                 }
               
             } else {
@@ -243,11 +242,6 @@ function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
 }
 
 var selectOculto = false;
-
-var selectElement = document.getElementById('palpite');
-selectElement.addEventListener('change', function() {
-    geraPalpite(); 
-});
 
 var palpitePessoa;
 var palpiteBot;
@@ -315,24 +309,10 @@ function comparacao (cartaEscolhidaDoBot, cartaEscolhidaDaPessoa) {
     } else {
         palpiteBot -= 1;
         alert('O Bot fez');
-        // vezDoBot();
     }
     
 }
-function vezDoBot() {
-    do {
-        var cartaEscolhidaDoBot = Bot[Math.floor(Math.random() * rodada)];
-    } while (jaUsadas.includes(cartaEscolhidaDoBot));
 
-    jaUsadas.push(cartaEscolhidaDoBot);
-    
-    var posição = Bot.indexOf(cartaEscolhidaDoBot);
-
-    var idCarta = "cartaDoBotVerso" + posição;
-    var removerVerso = document.getElementById(idCarta)
-    removerVerso.remove();
-
-}
 
 
 

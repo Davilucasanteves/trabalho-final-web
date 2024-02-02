@@ -62,6 +62,7 @@ body {
 }
 .containerDaPessoa {
     position: relative;
+    cursor: pointer;
 } 
 .containerBaralho {
     position: relative;
@@ -81,41 +82,11 @@ body {
 
 
 /* Configuração das cartas depois da Primeira Rodada */
-#cartaDoBot0 {
+#cartaDoBot0, #cartaDoBotVerso0  {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-#cartaDoBot1 {
-    position: absolute;
-    top: 50%;
-    left: 33%;
-    transform: translate(-50%, -50%);
-    }
-#cartaDoBot2 {
-    position: absolute;
-    top: 50%;
-    left: 16.13%;
-    transform: translate(-50%, -50%);
-}
-#cartaDoBot3 {
-    position: absolute;
-    top: 50%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-}
-#cartaDoBot4 {
-    position: absolute;
-    top: 50%;
-    left: 84%;
-    transform: translate(-50%, -50%);
-}
-#cartaDoBotVerso0 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
 }
 #cartaDoBot1, #cartaDoBotVerso1  {
     position: absolute;
@@ -142,7 +113,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#cartaDaPessoa0 {
+
+
+#cartaDaPessoa0, #cartaDaPessoaVerso0 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -181,15 +154,7 @@ body {
     height: 15vh;
 }
 select {
-    margin-top: 6px;
-    width: auto;
-    font-size: 18px;
-    text-align: center; 
+    font-size: 20px;
+    text-align: center;
 }
-label {
-    font: 18pt sans-serif;
-    color:rgb(255, 255, 255);
-    margin-top: 5px;
-}
-
                                                                                                                                                                                      
