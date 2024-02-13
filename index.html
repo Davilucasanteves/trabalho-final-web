@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="/trabalho-final-web/imagens/favicon.ico" type="image/x-icon">
-    <title>Login</title>
-</head>
-<body>
-    <header>
-        <div id="cabeçalho">
-            <h1>AdivinheSô</h1>
-        </div>
-    </header>
-    <section id="informações">
-
-        <form id="form" action="">
-            Email: <input id="email" name="email" type="text" placeholder="Digite seu e-mail"> <br>
-            Senha: <input id="senha" name="senha" type="password" placeholder="Digite sua senha"><br>
-            <input type="submit" value="Fazer Login"><br>
-            <a id="cadastrar" href="/trabalho-final-web/webCore/cadastro.html" target="_blank">Ainda não é cadastrado?</a>
-        </form>
-        
-    </section>
-
-    <footer id="rodapé">
-        <div id="container">
-        <p id="colab">Colaboradores:</p>
-            <div class="linha">
-                <div id="nomes">
-                    <ul>
-                        <li><a target=”_blank” href="https://www.instagram.com/_davilucasant">Daví Lucas</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/neres_renatto">Renato Neres</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/ronancouto_">Ronan Mendes</a></li>
-                    </ul>
-                </div>
-                <div id="nomes">
-                    <ul>
-                        <li><a target=”_blank” href="https://www.instagram.com/samuel.cairess">Samuel Caires</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/thallys_hv">Thallys Henriques</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/walissonfernandesdias">Walisson Fernandes</a></li>
-                    </ul>
-                </div>
+    <head>
+        <title>AdivinheSô - Entrar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" href="/trabalho-final-web/imagens/favicon.ico" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="titulo">AdivinheSô</h1>
+        </header>
+        <section>
+            <form id="form" action="">
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="text" placeholder="Digite seu e-mail">
+                <label for="senha">Senha:</label>
+                <input id="senha" name="senha" type="password" placeholder="Digite sua senha">
+                <i id="olho" class="bi bi-eye-fill" onclick="mostraSenha()"></i>
+                <input class="bntEnviar" type="submit" value="Entrar">
+                <a id="cadastrar" href="/trabalho-final-web/webCore/cadastro.html">Ainda não é cadastrado?</a>
+            </form>
+        </section>
+        <footer>
+            <div class="nomes">
+                <h2 id="fa">Colaboradores:</h2>
+                <ul class="listOne">
+                    <li><a target='blank' href="https://www.instagram.com/_davilucasant">Daví Lucas</a></li>
+                    <li><a target='blank' href="https://www.instagram.com/thallys_hv">Thallys Henriquess</a></li>
+                    <li><a target='blank' href="https://www.instagram.com/ronancouto_">Ronan Mendes</a></li> 
+                </ul>
+                <ul class="listTwo">
+                    <li><a target='blank' href="https://www.instagram.com/samuel.cairess">Samuel Caires</a></li>
+                    <li><a target='blank' href="https://www.instagram.com/neres_renatto">Renato Neres</a></li>
+                    <li><a target='blank' href="https://www.instagram.com/walissonfernandesdias">Walisson Fernandes</a></li>
+                </ul>
             </div>
-    </footer>
-    
-    <script src="index.js"></script>
-</body>
+        </footer>
+        <script src="index.js"></script>
+    </body>
 </html>

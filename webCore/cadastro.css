@@ -1,0 +1,22 @@
+#olhoSenha{
+    top: 32%;
+    right: 5%;
+}
+#olhoConfirmaSenha{
+    top: 55%;
+    right: 5%;
+}
+
+@media (max-width: 560px) {
+    form {
+        height: 80%;
+
+        grid-template-rows: 15pt auto 18pt auto 15pt auto auto 10pt;
+    }
+    #olhoSenha {
+        top: 34%;
+    }
+    #olhoConfirmaSenha {
+        top: 58%;
+    }
+}

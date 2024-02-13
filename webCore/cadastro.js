@@ -1,3 +1,16 @@
+function mostraSenha() {
+    var inputPass = document.getElementById('senha');
+    var iconeOlho = document.getElementById('olho');
+
+    if (inputPass.type === 'password'){
+        inputPass.setAttribute('type', 'text')
+        iconeOlho.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+    } else {
+        inputPass.setAttribute('type', 'password')
+        iconeOlho.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+    }
+}
+
 const form = document.getElementById("form");
 form.addEventListener("submit", logSubmit);
 

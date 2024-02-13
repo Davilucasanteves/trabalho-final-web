@@ -4,69 +4,154 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-#cabeçalho {
-    font-size: 14pt;
-    color: whitesmoke;
+header {
+    display: grid;
+    height: 15vh;
     background-color: rgba(157, 0, 0, 1);
-    text-align: center;
-    padding: 10px;
 }
-
-#informações {
-    display: flex;
-    text-align: center;
-    font-size: 14pt;
-    line-height: 35px;
-    padding-left: 36%;
-    padding-top: 10%;
+h1 {
+    font-size: 35pt;
+    color: whitesmoke;
+    place-self: center;
 }
-
+section {
+    display: grid;
+    height: 60vh;
+    place-items: center; 
+}
+form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 60%;
+    width: 510px;
+    margin-right: 60px;
+}
+input {
+    place-self: center;
+    height: 70%;
+    width: 100%;
+    background-color: #fffbc7;
+    border: none;
+    outline: none;
+}
+input[type="text"],
+input[type="password"] {
+    box-shadow: 7px 10px 0px 0px #4B4747;
+    border-radius: 10px;
+    padding-left: 5%;
+}
+input[type='submit'] {
+    text-align: center;
+    font-size: 18pt;
+    color: whitesmoke;
+    background-color: #0a66c2;
+    border-radius: 20px;
+    align-self: end;
+}
+label {
+    font-size: 16pt;
+    place-self: center right;
+    margin: 0px 5px 0px 3px;
+}
+i {
+    cursor: pointer;
+    position: absolute;
+    font-size: 16pt;
+    right: 4%;
+    top: 34%
+} 
+.bntEnviar{
+    grid-column: 2;
+    cursor: pointer;
+}
 #cadastrar {
-    color: black;
-    font-size: 11pt;
+    color: rgb(0, 0, 0);
+    font-size: 10pt;
+    justify-self: center;
+    grid-column: 2;
+    padding-top: 8px;
 }
-
+footer {
+    display: grid;
+    height: 25vh;
+    background-color: #4B4747;
+    grid-template-columns: 500px 10fr;
+    grid-template-rows: 1fr;
+}
+.nomes {
+    position: relative;
+}
+h2 {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-size: 13pt;
+    color: whitesmoke;
+}
+.listOne {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+}
+.listTwo {
+    position: absolute;
+    left: 25%;
+    bottom: 15%;
+}
 ul {
     list-style: none;
 }
-
+li {
+    margin-top: 10px;
+}
 a {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
-
 a:hover {
     font-style: oblique;
 }
 
-#container {
-    margin: auto;
+@media (max-width: 560px) {
+    form {
+        width: 90%;
+        height: 70%;
+        margin-right: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15pt auto 18pt auto auto 15pt;
+    }
+    input {
+        place-self: start;
+    }
+    .bntEnviar {
+        grid-column: 1;
+    }
+    label {
+        font-size: 12pt;
+        justify-self: left;
+    }
+    #cadastrar {
+        grid-column: 1;
+    }
+    i {
+        font-size: 20pt;
+        right: 6%;
+        top: 47%
+    } 
+    footer {
+        grid-template-columns: auto;
+    }
+    h2 {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .listOne {
+        right: 51%;
+    }
+    .listTwo {
+        left: 51%;
+    }
 }
 
-#colab {
-    text-align: left;
-    line-height: 55pt;
-    padding-left: 13%;
-    padding-bottom: 20px;
-}
-
-.linha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15%;
-    padding: 0 25px;
-}
-
-#rodapé {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 13.5pt;
-    color: whitesmoke;
-    background-color: #4B4747;
-    text-align: center;
-    line-height: 20pt;
-    padding: 20px;
-    padding-top: 0px;
-}

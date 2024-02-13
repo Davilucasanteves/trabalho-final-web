@@ -262,9 +262,7 @@ function mostraPalpite() {
     var selecionaBot = document.querySelector(".ConteudoBot");
     var selecionaPessoa = document.querySelector(".ConteudoPessoa");
 
-    // Verifica se a rodada é igual a 2
     if (rodada == 2) {
-        // Cria os elementos apenas quando a rodada for igual a 2
         var fraseDoBot = document.createElement('p');
         fraseDoBot.textContent = "Palpite do Bot: " + palpiteBot;
         selecionaBot.appendChild(fraseDoBot);
@@ -273,7 +271,6 @@ function mostraPalpite() {
         fraseDaPessoa.textContent = "Palpite da Pessoa: " + palpitePessoa;
         selecionaPessoa.appendChild(fraseDaPessoa);
     } else {
-        // Atualiza os valores quando a rodada for diferente de 2
         if (selecionaBot.lastChild) {
             selecionaBot.lastChild.textContent = "Palpite do Bot: " + palpiteBot;
         }

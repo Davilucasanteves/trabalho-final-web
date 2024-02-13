@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <title>AdivinheSô - Cadastrar </title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/trabalho-final-web/index.css">
-    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
-    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css" >
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="shortcut icon" href="/trabalho-final-web/imagens/favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
-        <div id="cabeçalho">
-            <h1>AdivinheSô</h1>
-        </div>
+        <h1>AdivinheSô</h1>
     </header>
-    <section id="informações">
-
-        <form id="form">
-            Nome:  <input type="text" placeholder="Seu nome" id="nome"><br>
-            E-Mail: <input type="email" placeholder="Seu email" id="email"><br>
-            Senha: <input type="password" placeholder="Sua senha" id="senha"><br>
-            Confirmação da senha:<input type="password" placeholder="Sua senha" id="confirmaSenha"><br>
-            <input type="submit" value="Cadastrar"><br>
+    <section>
+        <form id="form" action="">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" placeholder="Digite seu e-mail">
+            <label for="senha">Senha:</label>
+            <input id="senha" name="senha" type="password" placeholder="Digite sua senha">
+            <label for="confirmaSenha">Senha:</label>
+            <input id="confirmaSenha"type="password" placeholder="Confirme sua senha">
+            <i id="olhoSenha" class="bi bi-eye-fill" onclick="mostraSenha()"></i>
+            <i id="olhoConfirmaSenha" class="bi bi-eye-fill" onclick="mostraSenha()"></i>
+            <input class="bntEnviar" type="submit" value="Cadastrar">
+            <a id="cadastrar" href="/trabalho-final-web/index.html">Já é cadastrado?</a>
         </form>
-
     </section>
-
-    <div id="botão">
-       
-        <p style="margin-top: 10pt; font-size: 14pt;">Já é cadastrado? <a style="color: rgb(71, 71, 71);" id="btn-login" href="../index.html">Fazer login</a></p>
-    </div>
-
-    <footer id="rodapé">
-        <div id="container">
-        <p id="colab">Colaboradores:</p>
-            <div class="linha">
-                <div id="nomes">
-                    <ul>
-                        <li><a target=”_blank” href="https://www.instagram.com/_davilucasant">Daví Lucas</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/neres_renatto">Renato Neres</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/ronancouto_">Ronan Mendes</a></li>
-                    </ul>
-                </div>
-                <div id="nomes">
-                    <ul>
-                        <li><a target=”_blank” href="https://www.instagram.com/samuel.cairess">Samuel Caires</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/thallys_hv">Thallys Henriques</a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/walissonfernandesdias">Walisson Fernandes</a></li>
-                    </ul>
-                </div>
-            </div>
+    <footer>
+        <div class="nomes">
+            <h2 id="fa">Colaboradores:</h2>
+            <ul class="listOne">
+                <li><a target='blank' href="https://www.instagram.com/_davilucasant">Daví Lucas</a></li>
+                <li><a target='blank' href="https://www.instagram.com/thallys_hv">Thallys Henriquess</a></li>
+                <li><a target='blank' href="https://www.instagram.com/ronancouto_">Ronan Mendes</a></li> 
+            </ul>
+            <ul class="listTwo">
+                <li><a target='blank' href="https://www.instagram.com/samuel.cairess">Samuel Caires</a></li>
+                <li><a target='blank' href="https://www.instagram.com/neres_renatto">Renato Neres</a></li>
+                <li><a target='blank' href="https://www.instagram.com/walissonfernandesdias">Walisson Fernandes</a></li>
+            </ul>
         </div>
     </footer>
-    
     <script src="/trabalho-final-web/webCore/cadastro.js"></script>
 </body>
 </html>

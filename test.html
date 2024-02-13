@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        }
+        header {
+            height: 20vh;
+            width: 100vw;
+            background-color: blue;
+        }
+        h1 {
+            color:antiquewhite;
+            text-align: center;
+            font-size: 35pt;
+            width: 50vw;
+        }
+        form {
+            text-align: center; /* Centraliza os elementos internamente */
+            width: h1;
+            margin: auto; /* Centraliza horizontalmente usando margin auto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SAMUEL CAIRES</h1>
+    </header>
+    <section>
+        <form id="form" action="">
+            <label for="email">&nbspEmail:&nbsp</label>
+            <input id="email" name="email" type="text" placeholder="Digite seu e-mail">
+            <label for="senha">Senha:&nbsp</label>
+            <input id="senha" name="senha" type="password" placeholder="Digite sua senha">
+            <input class="bntEnviar" type="submit" value="Entrar">
+            <a id="cadastrar" href="/trabalho-final-web/webCore/cadastro.html">Ainda não é cadastrado?</a>
+        </form>
+    </section>
+</body>
+</html>
