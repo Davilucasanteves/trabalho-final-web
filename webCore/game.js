@@ -132,7 +132,6 @@ selectElement.addEventListener('change', function() {
     if (controlaChangeSelect) {
         geraPalpite(); 
     }
-
 });
 function AtualizaSelect() {
     const OpçõesDoSelect = [
@@ -177,17 +176,23 @@ function AdicionaOutraCartaParaBot(Bot) {
     containerBot.innerHTML = '';
 
     for (let i = 0; i < rodada; i++) {
+        const divCarta = document.createElement('div');
+        divCarta.className = 'carta-container';
+
         let frenteCarta = document.createElement('img');
         frenteCarta.className = 'carta';
         frenteCarta.id = 'cartaDoBot' + i;
         frenteCarta.src = Cartas[Bot[i]].caminho;
-        containerBot.appendChild(frenteCarta);
 
         let versoCarta = document.createElement('img');
         versoCarta.className = 'carta';
         versoCarta.id = 'cartaDoBotVerso' + i;
         versoCarta.src = "../Cartas/verso.png";
-        containerBot.appendChild(versoCarta);
+        
+        divCarta.appendChild(frenteCarta);
+        divCarta.appendChild(versoCarta);
+
+        containerBot.appendChild(divCarta);
     }
 }
 
@@ -198,11 +203,17 @@ function AdicionaOutraCartaParaPessoa(Pessoa, Bot) {
     containerDaPessoa.innerHTML = '';
 
     for (let i = 0; i < rodada; i++) {
+        const divCarta = document.createElement('div');
+        divCarta.className = 'carta-container';
+        
         let frenteCarta = document.createElement('img');
         frenteCarta.className = 'carta';
         frenteCarta.id = 'cartaDaPessoa' + i;
         frenteCarta.src = Cartas[Pessoa[i]].caminho;
-        containerDaPessoa.appendChild(frenteCarta);
+        frenteCarta.style.cursor = "pointer";
+
+        divCarta.appendChild(frenteCarta);
+        containerDaPessoa.appendChild(divCarta);
 
         frenteCarta.addEventListener('click', function(evento) {
             if (selectOculto) {

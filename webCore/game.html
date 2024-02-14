@@ -3,43 +3,42 @@
     <head>
         <title>AdivinheSô</title>
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="game.css">
         <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <header>
-            <div class="logoTexto">
-                <h1>AdivinheSô</h1>
-            </div>
+            <h1>AdivinheSô</h1>
         </header>
         <section class="CoreGame">
-
             <div class="VidaDoBot">
-                <div class="ConteudoBot">
-                    <img id="FotoDePerfilDoBot" src="../imagens/IconBot.png">          
+                <div class="infoUser">
+                    <img src="../imagens/IconBot.png">          
                     <p class="ÍconeDeVida" id="ÍconeDeVidaDoBot">❤️❤️❤️</p>
                 </div>
             </div>
-            
             <div class="VidaDaPessoa">
-                <div class="ConteudoPessoa">
-                    <img id="FotoDePerfilDaPessoa" src="../imagens/IconPessoa.png"> 
+                <div class="infoUser">
+                    <img src="../imagens/IconPessoa.png"> 
                     <p class="ÍconeDeVida" id="ÍconeDeVidaDaPessoa">❤️❤️❤️</p>
                 </div>
             </div>
-
             <div class="containerBot">
-                <img class="carta" id="cartaDoBot0" src=""> 
+                <div class="carta-container">
+                    <img class="carta" id="cartaDoBot0" src=""> 
+                </div>
             </div>
-
             <div class="containerDaPessoa">
-                <img class="carta" id="cartaDaPessoa0" src="">
-                <img class="carta" id="cartaDaPessoaVerso0" src="../Cartas/verso.png">    
+                <div class="carta-container">
+                    <img class="carta" id="cartaDaPessoa0" src="">
+                    <img class="carta" id="cartaDaPessoaVerso0" src="../Cartas/verso.png"> 
+                </div>  
             </div>
-
             <div class="containerBaralho">
-                <img class="carta" id="cartaBaralho" src="../Cartas/verso.png">
+                <div class="carta-container">
+                    <img id="cartaBaralho" src="../Cartas/verso.png">
+                </div>
             </div>
         </section>
         <div class="selectContainer">   
