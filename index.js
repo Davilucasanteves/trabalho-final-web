@@ -56,7 +56,7 @@ function mostraUsuario(token) {
         })
         .then((data) => {
             if (data.message == "Entidade não Autenticada") {
-                alert('Senha ou Email incorreto');
+                alert('Senha ou Email incorreto, tente usuário: f@email.com; senha: 111 ');
             } else {
                 window.location.href = 'https://trabalho-final-web-davi.vercel.app/webCore/game.html'
             }
