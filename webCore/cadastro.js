@@ -17,7 +17,6 @@ function logSubmit(event) {
 
     const formEmail = document.getElementById("email").value;
     const formSenha = document.getElementById("senha").value;
-    const formNome = document.getElementById("nome").value;
     const formConfirmaSenha = document.getElementById("confirmaSenha").value;
 
     if (formSenha !== formConfirmaSenha) {
@@ -26,7 +25,6 @@ function logSubmit(event) {
     }
 
     const userData = {
-        nome: formNome,
         email: formEmail,
         senha: formSenha,
     };
