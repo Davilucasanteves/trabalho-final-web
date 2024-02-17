@@ -39,7 +39,7 @@ function logSubmit(event) {
         },
     };
 
-    fetch("https://back-end-tf-web.vercel.app/usuario/cadastro", inforeq)
+    fetch("https://back-end-tf-web.vercel.app/usuario", inforeq)
         .then(function (res) {
             if (!res.ok) {
                 throw new Error('Erro no cadastro'); // handle non-successful responses
