@@ -1,13 +1,16 @@
 function mostraSenha() {
     var inputPass = document.getElementById('senha');
-    var iconeOlho = document.getElementById('olho');
+    var iconeOlho = document.getElementById('olhoSenha');
+    var iconeOlho2 = document.getElementById('olhoConfirmaSenha');
 
     if (inputPass.type === 'password'){
         inputPass.setAttribute('type', 'text')
         iconeOlho.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+        iconeOlho2.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
     } else {
         inputPass.setAttribute('type', 'password')
         iconeOlho.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
+        iconeOlho2.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
     }
 }
 
