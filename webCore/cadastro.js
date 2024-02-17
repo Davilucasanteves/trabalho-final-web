@@ -6,11 +6,11 @@ function mostraSenha() {
     if (inputPass.type === 'password'){
         inputPass.setAttribute('type', 'text')
         iconeOlho.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
-        iconeOlho2.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+        iconeOlho2.classList.replace('bi-eye-fill', 'bi bi-eye-fill')
     } else {
         inputPass.setAttribute('type', 'password')
         iconeOlho.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
-        iconeOlho2.classList.replace('bi-eye-fill', 'bi-eye-slash-fill')
+        iconeOlho2.classList.replace('bi-eye-fill', 'bi bi-eye-fill')
     }
 }
 
