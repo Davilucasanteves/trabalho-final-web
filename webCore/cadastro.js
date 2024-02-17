@@ -1,5 +1,6 @@
 function mostraSenha() {
     var inputPass = document.getElementById('senha');
+    var inputConfirmaSenha = document.getElementById('confirmaSenha');
     var iconeOlho = document.getElementById('olhoSenha');
     var iconeOlho2 = document.getElementById('olhoConfirmaSenha');
 
