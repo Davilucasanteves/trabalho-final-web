@@ -1,25 +1,13 @@
-function mostraSenha() {
-    var inputPass = document.getElementById('senha');
-    var inputConfirmaSenha = document.getElementById('confirmaSenha');
-    var iconeOlho = document.getElementById('olhoSenha');
-    var iconeOlho2 = document.getElementById('olhoConfirmaSenha');
-
-    if (inputPass.type === 'password') {
-        inputPass.setAttribute('type', 'text');
+function mostraSenha(iconeOlho, inputSenha) {
+    if (inputSenha.type === 'password') {
+        inputSenha.setAttribute('type', 'text');
         iconeOlho.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
     } else {
-        inputPass.setAttribute('type', 'password');
+        inputSenha.setAttribute('type', 'password');
         iconeOlho.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
     }
-
-    if (inputConfirmaSenha.type === 'password') {
-        inputConfirmaSenha.setAttribute('type', 'text');
-        iconeOlho2.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
-    } else {
-        inputConfirmaSenha.setAttribute('type', 'password');
-        iconeOlho2.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
-    }
 }
+
 
 
 const form = document.getElementById("form");
