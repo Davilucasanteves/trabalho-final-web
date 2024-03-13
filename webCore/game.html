@@ -15,37 +15,35 @@
         </header>
         <section class="CoreGame">
             <div class="VidaDoBot">
-                <div class="infoUser">
+                <div class="infoUser" id="infoBot">
                     <img src="../imagens/IconBot.png">          
                     <p class="ÍconeDeVida" id="ÍconeDeVidaDoBot">❤️❤️❤️</p>
                 </div>
             </div>
             <div class="VidaDaPessoa">
-                <div class="infoUser">
+                <div class="infoUser" id="infoPessoa">
                     <img src="../imagens/IconPessoa.png"> 
                     <p class="ÍconeDeVida" id="ÍconeDeVidaDaPessoa">❤️❤️❤️</p>
                 </div>
             </div>
             <div class="containerBot">
-                <div class="carta-container">
+                <div class="cartaContainer">
                     <img class="carta" id="cartaDoBot0" src=""> 
                 </div>
             </div>
             <div class="containerDaPessoa">
-                <div class="carta-container">
-                    <img class="carta" id="cartaDaPessoa0" src="">
-                    <img class="carta" id="cartaDaPessoaVerso0" src="../Cartas/verso.png"> 
+                <div class="cartaContainer">
+                    <img class="carta frente" id="cartaDaPessoa0" src="">
+                    <img class="carta verso" id="cartaDaPessoaVerso0" src="../cartas/verso.png"> 
                 </div>  
             </div>
             <div class="containerBaralho">
-                <div class="carta-container">
-                    <img id="cartaBaralho" src="../Cartas/verso.png">
-                </div>
+                <img class="carta" src="../cartas/verso.png">
             </div>
         </section>
         <div class="selectContainer">   
-            <select id="palpite" onchange="Rodada()">  
-                <option value="null">Escolha seu palpite</option>
+            <select id="palpite">  
+                <option value="undefined">Escolha seu palpite</option>
                 <option value="0">Eu não faço!</option>
                 <option value="1">Eu faço!</option>
             </select>

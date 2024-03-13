@@ -19,7 +19,7 @@ function logSubmit(event) {
 
         const formEmail = document.getElementById("email");
         const formSenha = document.getElementById("senha");
-        
+
     const inforeq = {
         method: 'POST',
         body: JSON.stringify({
