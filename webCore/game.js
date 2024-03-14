@@ -44,6 +44,8 @@ var BotCarta;
 var MinhaCarta; 
 var TotalVidasJogador = 3;
 var TotalVidasBot = 3;
+const vidasBot = document.getElementById('ÍconeDeVidaDoBot');
+const vidasJogador = document.getElementById('ÍconeDeVidaDaPessoa');
 
 var rodada = 1;
 
@@ -53,7 +55,9 @@ var selectElement = document.getElementById('palpite');
 
 selectElement.addEventListener('change', function() {
     if (controlaChangeSelect) {
-        geraPalpite(); 
+        selectElement.disabled = true;
+        selectTravado = true;
+        geraPalpiteBot(); 
     } else {
         palpite();
     }
@@ -95,9 +99,6 @@ function flipCarta() {
     }, 2000);
 }
 function vidas() {
-    let vidasBot = document.getElementById('ÍconeDeVidaDoBot');
-    let vidasJogador = document.getElementById('ÍconeDeVidaDaPessoa');
-
     if (TotalVidasBot == 2) {
         vidasBot.innerHTML = '❤️❤️🖤';
     } else if (TotalVidasBot == 1) {
@@ -105,7 +106,7 @@ function vidas() {
     } else if (TotalVidasBot == 0) {
         vidasBot.innerHTML = '🖤🖤🖤';
         alert("Você venceu!");
-        location.reload()
+        location.reload();
     } 
     
     if (TotalVidasJogador == 2) {
@@ -115,7 +116,7 @@ function vidas() {
     } else if (TotalVidasJogador == 0) {
         vidasJogador.innerHTML = '🖤🖤🖤';
         alert("Você perdeu");
-        location.reload()
+        location.reload();
     } 
     rodada += 1; 
     proximaRodada();
@@ -126,6 +127,7 @@ function vidas() {
 function proximaRodada() {
     AtualizaSelect();
     sortearCartas();
+    // ocultaPalpite();
     controlaChangeSelect = true;
 }
 var controlaChangeSelect = false;
@@ -134,34 +136,44 @@ var selectTravado = false;
 var palpitePessoa;
 var palpiteBot;
 var cartasClicadas = 0;
+var fraseDoBot;
+var fraseDaPessoa;
 
 
-function geraPalpite () {
+function geraPalpiteBot() {
     palpitePessoa = parseInt(selectElement.value, 10);
     do {
         palpiteBot = Math.floor(Math.random() * rodada + 1);
     } while (palpitePessoa + palpiteBot == rodada);
-    
-    selectElement.disabled = true;
-    selectTravado = true;
-    mostraPalpite ();
+    mostraPalpites();
 }
-function mostraPalpite() {
-    let selecionaBot = document.getElementById('infoBot');
-    let selecionaPessoa = document.getElementById('infoPessoa');
-
+function mostraPalpites() {
+    let containerInfoBot = document.getElementById('infoBot');
+    let containerInfoPessoa = document.getElementById('infoPessoa');
     if (rodada == 2) {
         let fraseDoBot = document.createElement('p');
         fraseDoBot.textContent = "Palpite do Bot: " + palpiteBot;
-        selecionaBot.appendChild(fraseDoBot);
+        fraseDoBot.id = 'fraseDoBot';
+        containerInfoBot.appendChild(fraseDoBot);
 
         let fraseDaPessoa = document.createElement('p');
         fraseDaPessoa.textContent = "Palpite da Pessoa: " + palpitePessoa;
-        selecionaPessoa.appendChild(fraseDaPessoa);
+        fraseDaPessoa.id = 'fraseDoPessoa';
+        containerInfoPessoa.appendChild(fraseDaPessoa);
     } else {
-        selecionaBot.lastChild.textContent = "Palpite do Bot: " + palpiteBot;
-        selecionaPessoa.lastChild.textContent = "Palpite da Pessoa: " + palpitePessoa;
+        containerInfoBot.lastChild.textContent = "Palpite do Bot: " + palpiteBot;
+        containerInfoPessoa.lastChild.textContent = "Palpite da Pessoa: " + palpitePessoa;
+
+        containerInfoBot.lastChild.style.display = "block";
+        containerInfoPessoa.lastChild.style.display = "block";
     }
+}
+function ocultaPalpite(){
+    let fraseDoBot = document.getElementById('fraseDoBot');
+    let fraseDaPessoa = document.getElementById('fraseDoPessoa');
+
+    fraseDoBot.style.display = "none";
+    fraseDaPessoa.style.display = "none";
 }
 function AtualizaSelect() {
     const OpçõesDoSelect = [
@@ -237,7 +249,7 @@ function adicionaCartaPessoa(cartasParaPessoa, cartasParaBot) {
 
         const cartaEscolhidaDaPessoa = Cartas[cartasParaPessoa[i]].valor;
 
-        divCarta.addEventListener('click', () => 
+        frenteCarta.addEventListener('click', () => 
             gerirClick(frenteCarta, cartaEscolhidaDaPessoa, cartasParaBot)
         );
         
@@ -269,25 +281,39 @@ function jogadaDoBot (cartasParaBot, cartaEscolhidaDaPessoa) {
 function comparacao (cartaEscolhidaDoBot, cartaEscolhidaDaPessoa) {
     if (cartaEscolhidaDoBot > cartaEscolhidaDaPessoa){
         palpitePessoa -= 1;
-        console.log("pessoa perdeu")
     } else {
         palpiteBot -= 1;
-        console.log("pessoa ganhou")
     }
     if (cartasClicadas == rodada) {
         resultadoAposTodasCartaJogadas();
     }
 }
 function resultadoAposTodasCartaJogadas() {
-    if (palpitePessoa != 0) {
-        TotalVidasJogador -= 1;
-    }
-    if (palpiteBot != 0) {
-        TotalVidasBot -= 1;
+    if (TotalVidasJogador && TotalVidasBot == 1){
+        if (Math.abs(palpitePessoa) < Math.abs(palpiteBot)) {
+            vidasBot.innerHTML = '🖤🖤🖤';
+            alert('O jogador ganhou devido seu palpite está mais próximo do resultado');
+            location.reload();
+        } else if (Math.abs(palpiteBot) < Math.abs(palpitePessoa)) {
+            vidasJogador.innerHTML = '🖤🖤🖤';
+            alert('O bot ganhou devido seu palpite está mais próximo do resultado');
+            location.reload();
+        } else {
+            alert('Ocorreu um empate, a rodada será repetida');
+            proximaRodada();
+        }
+    } else {
+        if (palpitePessoa != 0) {
+            TotalVidasJogador -= 1;
+        }
+        if (palpiteBot != 0) {
+            TotalVidasBot -= 1;
+        }
+        ocultaPalpite();
+        setTimeout(vidas, 1000);
     }
     selectElement.disabled = false;
     selectTravado = false;
     cartasClicadas = 0;
     cartasJaUsadas = [];
-    setTimeout(vidas, 1000)
 }
